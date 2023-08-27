@@ -5,12 +5,12 @@ return(
 
     <div className='ContainerBody'>
        <h1>Hola mi nombre es Magali ...</h1>
-       <h1>Cual es el tuyo ?</h1>
-       <h3>Podes escribirlo aqui</h3>
+       <h1 className='efect'>Cual es el tuyo ?</h1>
+       <p>Podes escribirlo aqui</p>
        <input type="text"/>
-       <button>ENVIAR</button>
-      <h4>Prefiero no hacerlo</h4>
-      <button>START</button>
+       <button>Presentarme</button>
+      <p>Prefiero no hacerlo</p>
+      <button>EMPEZAR</button>
     </div>
 )
 }

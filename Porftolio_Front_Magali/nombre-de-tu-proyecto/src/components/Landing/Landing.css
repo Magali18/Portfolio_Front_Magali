@@ -1,0 +1,22 @@
+.ContainerBody{
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(249, 146, 206);
+    margin-top:20%
+}
+
+.efect{
+    display: block;
+    white-space:nowrap;
+    border-right: 1px solid;
+    width: 55ch;
+    animation:typing 8s steps(80), 
+    blink .6s infinite step-end alternate;
+    overflow:hidden;
+   }
+   @keyframes typing{
+    from{width:0}
+   }
+   @keyframes blink{
+    50% {border-color:transparent}
+   }

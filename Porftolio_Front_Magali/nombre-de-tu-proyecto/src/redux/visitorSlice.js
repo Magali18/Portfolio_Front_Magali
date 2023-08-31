@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 const initialState = {
   name: "",
 };
@@ -11,6 +12,7 @@ export const visitorSlice = createSlice({
       state.name = name;
     },
   },
+  
 });
 export const {addVisitor} = visitorSlice.actions
 export default visitorSlice.reducer;

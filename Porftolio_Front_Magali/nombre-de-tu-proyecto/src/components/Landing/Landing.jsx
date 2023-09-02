@@ -1,56 +1,86 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import  {useDispatch}  from "react-redux";
-import { useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import postVisit from "../../redux/vistHandler";
 
+const Landing = () => {
+  //----------------------ESTADO--------------------------
 
-const Landing=()=>{
+  const [visitData, setVisitData] = useState({
+    name: "",
+  });
+  //---------------------VARIABLES------------------------
+
+  const dispatch = useDispatch();
   const form = useRef();
   const navigate = useNavigate();
 
+  //-----------------HANDLE CHANGE------------------------
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setVisitData({ ...visitData, [name]: value });
+  };
+  //-----------------SEND EMAIL----------------------------
+
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('service_fwmu3vq', 'template_dqufk4h', form.current, 'A-0VQcem-nMbwDjM6')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_fwmu3vq",
+        "template_dqufk4h",
+        form.current,
+        "A-0VQcem-nMbwDjM6"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
   };
-  const requestOptions = {
-    method: 'POST'
-   
-}
-  const dispatch = useDispatch();
-  useEffect(() => {
-  
-    fetch("http://localhost:3001/visit",requestOptions)
-      .then((res) => res.json())
-      .catch((err) => console.log(err));
-  }, [dispatch]);
- 
+  //----------------NAVIGATE------------------------
   const goToHomePage = () => {
-    navigate('/home');
+    navigate("/home");
+  };
+  //--------------------------------------------------
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    sendEmail(e);
+    goToHomePage()
+    dispatch(postVisit(visitData));
   };
 
-return(
-  
+  //---------------------------------------------------
 
-    <div className='ContainerBody'>
-       <h1>Hola mi nombre es Magali ...</h1>
-       <h1 className='efect'>Cual es el tuyo ?</h1>
-       <p>Podes escribirlo aqui</p>
-       <form  ref={form} onSubmit={sendEmail}>
-       <label>Name</label>
-      <input type="text" name="user_name" />
-      <button onClick={goToHomePage}>SEND</button>
-      <p>Prefiero no hacerlo</p>
-      <button onClick={goToHomePage}>EMPEZAR</button>
+  return (
+    <div>
+      <h1>Hola SOY Magali</h1>
+      <h1>Cual es el tuyo ? </h1>
+      <p>Podes escribirlo aqui</p>
+
+      <form id='LandingForm' ref={form} onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          value={visitData.name}
+          onChange={handleChange}
+        />
+
+        <button type="submit">EMPEZAR</button>
+
+        <p>Prefiero no hacerlo</p>
+
+        <button type="submit">SEND</button>
       </form>
+
     </div>
-)
-}
+  );
+};
+
+
 export default Landing;

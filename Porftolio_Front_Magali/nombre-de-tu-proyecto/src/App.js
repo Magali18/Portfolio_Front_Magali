@@ -3,17 +3,18 @@ import Home from "./components/Home/Home";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import  {useDispatch}  from "react-redux";
-import { addVisitor } from "./redux/visitorSlice";
 import { useEffect } from "react";
 
+
 function App() {
+
   const requestOptions = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json', // Especifica el tipo de contenido que estás enviando
-    }}
+    method: 'POST'
+   
+}
   const dispatch = useDispatch();
   useEffect(() => {
+  
     fetch("http://localhost:3001/visit",requestOptions)
       .then((res) => res.json())
       .catch((err) => console.log(err));

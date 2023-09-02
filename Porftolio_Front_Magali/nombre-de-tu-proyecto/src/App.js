@@ -2,7 +2,8 @@ import Landing from "./components/Landing/Landing";
 import Home from "./components/Home/Home";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-
+import {useDispatch} from 'react-redux'
+import {useEffect} from 'react'
 
 
 
@@ -10,7 +11,7 @@ function App() {
   const requestOptions = {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json', // Especifica el tipo de contenido que estás enviando
+      'Content-Type': 'application/json',
     }}
   const dispatch = useDispatch();
   useEffect(() => {

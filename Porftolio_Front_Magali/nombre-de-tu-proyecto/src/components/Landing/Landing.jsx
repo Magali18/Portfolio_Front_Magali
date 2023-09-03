@@ -60,7 +60,8 @@ const Landing = () => {
 
   return (
     <div className="containerLanding">
-      <h1>Hola SOY Magali</h1>
+      <div className="containerForm">
+      <h1>Hola mi nombre es Magali</h1>
       <h1>Cual es el tuyo ? </h1>
       <p>Podes escribirlo aqui</p>
 
@@ -78,7 +79,7 @@ const Landing = () => {
 
         <button type="submit">SEND</button>
       </form>
-
+      </div>
     </div>
   );
 };

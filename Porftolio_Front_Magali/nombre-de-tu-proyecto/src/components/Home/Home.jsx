@@ -4,7 +4,7 @@ const Home = () => {
   const visitor = useSelector((state) => state.visitor);
   return (
     <div className="containerHome">
-      <h1>Hola! Bienvenido : {visitor.name}</h1>
+      <h1> Bienvenido : {visitor.name}</h1>
     </div>
   );
 };

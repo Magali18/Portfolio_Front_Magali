@@ -1,0 +1,10 @@
+.containerLanding{
+    background-image: url('../../image/50e5f0d74e69fa074153f10b79f8a263.jpg');
+    background-size:contain;
+        background-position:inherit;
+        height: 100vh;
+        text-align:center;
+        color: aliceblue;
+        padding: 50px;
+      
+}

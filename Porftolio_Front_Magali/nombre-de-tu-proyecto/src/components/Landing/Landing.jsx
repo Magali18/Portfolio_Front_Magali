@@ -3,13 +3,14 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import postVisit from "../../redux/vistHandler";
+import postVisit from "../../redux/visitorSlice";
+import './Landing.css'
 
 const Landing = () => {
   //----------------------ESTADO--------------------------
 
   const [visitData, setVisitData] = useState({
-    name: "",
+    name:" ",
   });
   //---------------------VARIABLES------------------------
 
@@ -52,13 +53,13 @@ const Landing = () => {
     e.preventDefault();
     sendEmail(e);
     goToHomePage()
-    dispatch(postVisit(visitData));
+    visitData?dispatch(postVisit(visitData)):dispatch(postVisit());
   };
 
   //---------------------------------------------------
 
   return (
-    <div>
+    <div className="containerLanding">
       <h1>Hola SOY Magali</h1>
       <h1>Cual es el tuyo ? </h1>
       <p>Podes escribirlo aqui</p>

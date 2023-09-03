@@ -51,9 +51,9 @@ const Landing = () => {
   //--------------------------------------------------
   const handleSubmit = (e) => {
     e.preventDefault();
-    sendEmail(e);
+  {/*sendEmail(e);*/}
     goToHomePage()
-    visitData?dispatch(postVisit(visitData)):dispatch(postVisit());
+    dispatch(postVisit(visitData));
   };
 
   //---------------------------------------------------

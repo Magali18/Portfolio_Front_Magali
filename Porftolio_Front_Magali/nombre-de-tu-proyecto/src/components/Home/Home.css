@@ -1,8 +1,32 @@
-.containerHome{background-image: url('../../image/0741fc264ff67205ddfa8bfc89d2d005.jpg');
+.backgroundImage{
+  background-image: url('../../image/844d7c9e17c5abe5da771cdc3b487ec2.jpg');
+}
+.containerHome{
+  
     background-size:contain;
     background-position:inherit;
     height: 100vh;
     text-align:center;
     color: aliceblue;
-    padding: 50px;}
+    padding: 50px;
+}
+    
+.box {
+  text-align: left;
+  flex: 1; /* Hace que ambos contenedores ocupen un espacio igual */
+  border: 1px solid #ccc; /* Borde opcional para resaltar los contenedores */
+  padding: 10px; /* Espaciado interno opcional */
+  backdrop-filter: blur(5px) saturate(118%);
+  -webkit-backdrop-filter: blur(5px) saturate(118%);
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  font-size: 10px;
+  width: 1000px; /* Ancho del contenedor */
+  height: 400px;
+  margin: 0 auto; /* Establece el margen horizontal automáticamente para centrar */
+  position: center;
+  
+}
+
     

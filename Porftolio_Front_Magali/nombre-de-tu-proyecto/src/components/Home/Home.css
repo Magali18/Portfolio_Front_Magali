@@ -1,11 +1,12 @@
 .backgroundImage{
-  background-image: url('../../image/844d7c9e17c5abe5da771cdc3b487ec2.jpg');
+  background-image: url('../../image/cc6882eb885cc8ae28e04e4e6f880d62.jpg');
+  background-size:contain;
+  background-position:inherit;
+  height: 100vh;
 }
 .containerHome{
   
-    background-size:contain;
-    background-position:inherit;
-    height: 100vh;
+   
     text-align:center;
     color: aliceblue;
     padding: 50px;

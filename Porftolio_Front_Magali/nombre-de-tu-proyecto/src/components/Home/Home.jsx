@@ -1,9 +1,10 @@
 import { useSelector } from "react-redux";
 import"./Home.css"
+import IconTecnologi from "../IconTech/icon"
 
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import Form from 'react-bootstrap/Form';
+
 
 const Home = () => {
   const visitor = useSelector((state) => state.visitor);
@@ -19,35 +20,20 @@ const Home = () => {
       className="mb-3"
       fill
     >
-      <Tab className="box" eventKey="home" title="Home">
-        Tab content for Home
+      <Tab className="box" eventKey="Abaut" title="Abaut">
+      Abaut 
       </Tab>
-      <Tab className="box" eventKey="profile" title="Profile">
+      <Tab className="box" eventKey="Experiencia" title="Experiencia">
         Tab content for Profile
       </Tab>
-      <Tab className="box" eventKey="longer-tab" title="Loooonger Tab">
-        Tab content for Loooonger Tab
+      <Tab className="box" eventKey="Educacion" title="Educacion">
+        <p> Esta pagina es el resultado de la integracion de estas Tecnologias :  </p>
+       <IconTecnologi/>
+       <p>La frustracion y los errores abundan en el camino de la programacion a su vez es muy gratificante todo lo que se puede crear. </p>
+       
       </Tab>
-      <Tab className="box" eventKey="contact" title="Contact" >
-      
-
-
-
-    <>
-      <Form.Label htmlFor="inputPassword5">Tenes alguna critica contructiva ? me encantaria saber que puedo mejorar segun tu opinion. Lo podes escribir aqui:</Form.Label>
-      <Form.Control
-        type="text"
-        id="inputPassword5"
-        aria-describedby="passwordHelpBlock"
-      />
-      <Form.Text id="passwordHelpBlock" muted>
-        Your password must be 8-20 characters long, contain letters and numbers,
-        and must not contain spaces, special characters, or emoji.
-      </Form.Text>
-    </>
-
-
-
+      <Tab className="box" eventKey="Contacto" title="Contacto" >
+      contact
       </Tab>
     </Tabs>
   

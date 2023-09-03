@@ -4,7 +4,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
  const postVisit = createAsyncThunk("visitor/postVisit", async (visitData) => {
     try {
       const {data} = await axios.post(
-       'http://localhost:3001/visit'
+       'http://localhost:3001/visit',visitData
       );
       return data;
     } catch (error) {

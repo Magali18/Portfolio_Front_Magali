@@ -1,8 +1,9 @@
 import {useSelector}  from "react-redux";
+import ('./Home.css')
 const Home = () => {
   const visitor = useSelector((state) => state.visitor);
   return (
-    <div>
+    <div className="containerHome">
       <h1>Hola! Bienvenido : {visitor.name}</h1>
     </div>
   );

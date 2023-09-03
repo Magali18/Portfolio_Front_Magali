@@ -3,8 +3,8 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import postVisit from "../../redux/visitorSlice";
-import './Landing.css'
+import postVisit from "../../redux/vistHandler";
+import ('./Landing.css')
 
 const Landing = () => {
   //----------------------ESTADO--------------------------

@@ -17,9 +17,9 @@
   flex: 1; /* Hace que ambos contenedores ocupen un espacio igual */
   border: 1px solid #ccc; /* Borde opcional para resaltar los contenedores */
   padding: 10px; /* Espaciado interno opcional */
-  backdrop-filter: blur(5px) saturate(118%);
-  -webkit-backdrop-filter: blur(5px) saturate(118%);
-  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.31);
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
   font-size: 10px;
@@ -27,7 +27,7 @@
   height: 400px;
   margin: 0 auto; /* Establece el margen horizontal automáticamente para centrar */
   position: center;
-  
+  color: black;
 }
 
     

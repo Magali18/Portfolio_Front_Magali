@@ -11,8 +11,10 @@ export const visitorSlice = createSlice({
       const {name} = action.payload;
       state.name = name;
     },
+    allVisitor: (state,action)=>{
+      const { name } = action.payload
+    }
   },
-  
 });
-export const {addVisitor} = visitorSlice.actions
+export const {addVisitor,allVisitor} = visitorSlice.actions
 export default visitorSlice.reducer;

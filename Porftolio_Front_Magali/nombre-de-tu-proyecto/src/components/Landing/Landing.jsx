@@ -1,10 +1,16 @@
+
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import postVisit from "../../redux/vistHandler";
 import ('./Landing.css')
+
+ 
+
+
 
 const Landing = () => {
   //----------------------ESTADO--------------------------
@@ -60,6 +66,7 @@ const Landing = () => {
 
   return (
     <div className="containerLanding">
+      
       <div className="containerForm">
       <h1>Hola mi nombre es Magali</h1>
       <h1>Cual es el tuyo ? </h1>
@@ -72,7 +79,6 @@ const Landing = () => {
           value={visitData.name}
           onChange={handleChange}
         />
-
         <button type="submit">EMPEZAR</button>
 
         <p>Prefiero no hacerlo</p>

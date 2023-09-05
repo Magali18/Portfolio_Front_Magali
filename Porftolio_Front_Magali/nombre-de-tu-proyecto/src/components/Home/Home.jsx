@@ -22,11 +22,11 @@ const Home = () => {
     >
 
       <Tab className="box" eventKey="Abaut" title="Abaut">
-      <h5> Tengo 26 años soy Argentina, Cuento con un año de experiencia academica en programacion especificamente en lenguaje JavaScript.
-      Este porfolio refleja un poco de mi personalidad y mis conociemientos que adquiri a travez de mis estudios academicos y autodidactas.
-      En el camino de la programaion eh cometido muchos errores que a su vez afianzaron conocimientos y mi experiencia desarrollando.
-       Me gusta el trabajo en equipo y pienso  que la interaccion social hacen la vida un poco mas bella.
-       Sin duda soy una buena candidata para ........ ¿?  
+      <h5> 
+      Este porfolio refleja un poco de mi personalidad y conociemientos que adquiri a travez de mis estudios academicos y autodidactas.
+      En el camino de la programaion eh cometido muchos errores que afianzaron conocimientos y mi experiencia desarrollando.
+      Me gusta el trabajo en equipo y pienso  que la interaccion social hacen la vida un poco mas bella.
+       
          </h5>
 
       </Tab>

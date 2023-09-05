@@ -5,7 +5,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import postVisit from "../../redux/vistHandler";
+import {postVisit, getVisit} from "../../redux/vistHandler";
 import ('./Landing.css')
 
  
@@ -25,10 +25,11 @@ const Landing = () => {
   const navigate = useNavigate();
 
   //-----------------HANDLE CHANGE------------------------
-
+ 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setVisitData({ ...visitData, [name]: value });
+   
+    setVisitData({ ...visitData,[e.target.name]: e.target.value,
+    });
   };
   //-----------------SEND EMAIL----------------------------
 
@@ -59,14 +60,17 @@ const Landing = () => {
     e.preventDefault();
   {/*sendEmail(e);*/}
     goToHomePage()
-    dispatch(postVisit(visitData));
-  };
+    dispatch(postVisit());
+   };
 
+const butonsubmit =()=>{
+  dispatch(getVisit())
+}
   //---------------------------------------------------
 
   return (
     <div className="containerLanding">
-      
+<button type="submit" onSubit={butonsubmit}>TodosLosUsuarios</button>
       <div className="containerForm">
       <h1>Hola mi nombre es Magali</h1>
       <h1>Cual es el tuyo ? </h1>

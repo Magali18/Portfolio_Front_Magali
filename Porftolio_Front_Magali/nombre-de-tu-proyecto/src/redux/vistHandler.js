@@ -3,9 +3,9 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
  const postVisit = createAsyncThunk("visitor/postVisit", async (visitData) => {
     try {
-      
+
         const {data} = await axios.post(
-          'http://localhost:3001/visit',visitData
+          'http://localhost:3001/visit'
          );
          return data;
     
@@ -13,7 +13,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
       throw new Error(error);
     }
   });
-    const getVisit = createAsyncThunk("visitor/getVisit", async (visitData) => {
+    const getVisit = createAsyncThunk("visitor/getVisit", async () => {
     try {
       
         const {data} = await axios.get(
@@ -29,5 +29,5 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 
 
-  export default postVisit;
+  export {postVisit, getVisit};
    

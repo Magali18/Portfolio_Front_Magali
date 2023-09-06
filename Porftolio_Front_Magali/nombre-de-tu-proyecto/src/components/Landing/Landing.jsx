@@ -73,7 +73,7 @@ const butonsubmit =()=>{
 <button type="submit" onSubit={butonsubmit}>TodosLosUsuarios</button>
       <div className="containerForm">
       <h1>Hola mi nombre es Magali</h1>
-      <h1>Cual es el tuyo ? </h1>
+      <h1 className="efect">Cual es el tuyo ? </h1>
       <p>Podes escribirlo aqui</p>
 
       <form id='LandingForm' ref={form} onSubmit={handleSubmit}>
@@ -83,11 +83,14 @@ const butonsubmit =()=>{
           value={visitData.name}
           onChange={handleChange}
         />
-        <button type="submit">EMPEZAR</button>
+       
+        <button className='botonElegante' type="submit"> Enviar</button>
+        <div className="dot"> 
+         </div>
+       
 
-        <p>Prefiero no hacerlo</p>
-
-        <button type="submit">SEND</button>
+         <p><a href="/home" type="submit">Prefiero no hacerlo</a></p>
+    
       </form>
       </div>
     </div>

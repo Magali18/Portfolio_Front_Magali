@@ -2,13 +2,13 @@
   "name": "magali-pereyra",
   "version": "0.1.0",
   "private": true,
-  
   "dependencies": {
     "@emailjs/browser": "3.11.0",
     "@reduxjs/toolkit": "1.9.5",
     "@testing-library/jest-dom": "6.1.2",
     "@testing-library/react": "13.4.0",
     "@testing-library/user-event": "13.5.0",
+    "aos": "^2.3.4",
     "axios": "1.5.0",
     "bootstrap": "5.3.1",
     "i": "0.3.7",

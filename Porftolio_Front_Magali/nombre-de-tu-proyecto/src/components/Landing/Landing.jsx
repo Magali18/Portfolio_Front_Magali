@@ -1,10 +1,9 @@
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import {postVisit, getVisit} from "../../redux/vistHandler";
+import {postVisit, getVisit,postVisitNull} from "../../redux/vistHandler";
 import './Landing.css'
 import 'aos/dist/aos.css'; 
 import AOS from 'aos';
@@ -20,6 +19,8 @@ const Landing = () => {
   const [visitData, setVisitData] = useState({
     name:" ",
   });
+  const [errors, setErrors] = useState({
+    name: " "})
   //---------------------VARIABLES------------------------
 
   const dispatch = useDispatch();
@@ -32,8 +33,15 @@ const Landing = () => {
    
     setVisitData({ ...visitData,[e.target.name]: e.target.value,
     });
+    setErrors(
+      validate({
+        ...errors,
+        [e.target.name]: e.target.value,
+      })
+    );
   };
-  //-----------------SEND EMAIL----------------------------
+ 
+  //--------------------SEND EMAIL----------------------------
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -53,28 +61,34 @@ const Landing = () => {
         }
       );
   };
-  //----------------NAVIGATE------------------------
+  //----------------------------NAVIGATE------------------------
   const goToHomePage = () => {
     navigate("/home");
   };
-  //--------------------------------------------------
+  //-------------------------HANDLE SUBMIT-------------------------
   const handleSubmit = (e) => {
     e.preventDefault();
   {/*sendEmail(e);*/}
     goToHomePage()
-    dispatch(postVisit());
+    dispatch(postVisit(visitData));
    };
+//-------------------------BOTON PRUEBA---------------------------------
 
 const butonsubmit =()=>{
   dispatch(getVisit())
 }
-  //---------------------------------------------------
+//-------------------------HANDLE CLICK-------------------------------
+const handleClick =()=>{
+  dispatch(postVisitNull())
+  sendEmail();
+}
+  //---------------------------------------------------------------
 
   return (
     <div className="containerLanding">
 <button type="submit" onSubmit={butonsubmit}>TodosLosUsuarios</button>
       <div className="containerForm">
-        <div  data-aos="zoom-out-up">
+        <div >
       <h1>Hola </h1>
       </div>
       <h2>mi nombre es Magali</h2>
@@ -90,13 +104,9 @@ const butonsubmit =()=>{
           onChange={handleChange}
         />
        
-        <button className='botonElegante' type="submit"> Enviar</button>
-       
-       
-
-         <p><a href="/home" type="submit">Prefiero no hacerlo</a></p>
-    
+        <button className='botonElegante' type="submit">Enviar</button>
       </form>
+      <p><a href="/home" onClick={handleClick} type="submit">Prefiero no hacerlo</a></p>
       </div>
     </div>
   );

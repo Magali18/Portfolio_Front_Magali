@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { postVisit, getVisit, postVisitNull } from "../../redux/vistHandler";
 import "./Landing.css";
 import "aos/dist/aos.css";
-import validate from "./validate";
+
 
 const Landing = () => {
   //----------------------ESTADO--------------------------
@@ -16,7 +16,7 @@ const Landing = () => {
   });
 
   const [errors, setErrors] = useState({
-    name: "hola",
+    name: "",
   });
   //---------------------VARIABLES------------------------
 
@@ -29,10 +29,9 @@ const Landing = () => {
   const handleChange = (e) => {
     setVisitData({ ...visitData, [e.target.name]: e.target.value });
     setErrors(
-      validate({
-        ...errors,
+    {...errors,
         [e.target.name]: e.target.value,
-      })
+      }
     );
   };
 
@@ -62,13 +61,17 @@ const Landing = () => {
   };
   //-------------------------HANDLE SUBMIT-------------------------
   const handleSubmit = (e) => {
+    
     e.preventDefault();
-    {
-      /*sendEmail(e);*/
+    if(errors.name){
+      {
+        /*sendEmail(e);*/
+      }
+      goToHomePage();
+      dispatch(postVisit(visitData));
     }
-    goToHomePage();
-    dispatch(postVisit(visitData));
-  };
+    }
+   
   //-------------------------BOTON PRUEBA---------------------------------
 
   const butonsubmit = () => {

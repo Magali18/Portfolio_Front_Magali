@@ -5,7 +5,14 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import {postVisit, getVisit,postVisitNull} from "../../redux/vistHandler";
 import './Landing.css'
-import validate from "./validate";
+import 'aos/dist/aos.css'; 
+import AOS from 'aos';
+
+
+ 
+
+
+
 const Landing = () => {
   //----------------------ESTADO--------------------------
 

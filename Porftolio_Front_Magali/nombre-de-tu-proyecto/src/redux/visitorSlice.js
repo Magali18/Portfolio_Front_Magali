@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   name: "",
+  allVisit: []
 };
 export const visitorSlice = createSlice({
   name: "visitor",
@@ -12,7 +13,7 @@ export const visitorSlice = createSlice({
       state.name = name;
     },
     allVisitor: (state,action)=>{
-      const { name } = action.payload
+      const { allVisit } = action.payload
     }
   },
 });

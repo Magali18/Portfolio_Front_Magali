@@ -1,16 +1,19 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector} from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { postVisit, getVisit, postVisitNull } from "../../redux/vistHandler";
 import "./Landing.css";
-import "aos/dist/aos.css";
+
+
 
 
 const Landing = () => {
   //----------------------ESTADO--------------------------
+const allVisit = useSelector((state)=> state.visitor.allVisit)
 
+console.log(allVisit)
   const [visitData, setVisitData] = useState({
     name: "",
   });
@@ -86,9 +89,11 @@ const Landing = () => {
 
   return (
     <div className="containerLanding">
-      <button type="submit" onSubmit={butonsubmit}>
+
+      <button onClick={butonsubmit}>
         TodosLosUsuarios
       </button>
+
       <div className="containerForm">
         <div
           data-aos="fade-down"

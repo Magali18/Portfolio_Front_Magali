@@ -77,7 +77,10 @@ const butonsubmit =()=>{
         <div  data-aos="zoom-out-up">
       <h1>Hola </h1>
       </div>
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom"> 
       <h2>mi nombre es Magali</h2>
+      </div>
       <h3 className="efect">Cual es el tuyo ? </h3>
       <p>Podes escribirlo aqui</p>
 

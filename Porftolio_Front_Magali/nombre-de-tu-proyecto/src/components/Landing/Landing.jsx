@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import {postVisit, getVisit} from "../../redux/vistHandler";
 import './Landing.css'
 import 'aos/dist/aos.css'; 
-
+import AOS from 'aos';
 
 
  

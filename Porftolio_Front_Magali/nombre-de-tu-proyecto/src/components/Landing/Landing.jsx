@@ -3,8 +3,9 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useDispatch, useSelector} from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { postVisit, getVisit, postVisitNull } from "../../redux/vistHandler";
+import { postVisit, postVisitNull } from "../../redux/vistHandler";
 import "./Landing.css";
+import {addVisitor} from '../../redux/visitorSlice'
 
 
 
@@ -71,28 +72,24 @@ console.log(allVisit)
         /*sendEmail(e);*/
       }
       goToHomePage();
-      dispatch(postVisit(visitData));
+      dispatch(postVisit(visitData))
+      dispatch(addVisitor(visitData))
     }
     }
    
-  //-------------------------BOTON PRUEBA---------------------------------
 
-  const butonsubmit = () => {
-    dispatch(getVisit());
-  };
+
+
   //-------------------------HANDLE CLICK-------------------------------
   const handleClick = () => {
-    dispatch(postVisitNull());
-    sendEmail();
+    dispatch(postVisitNull())
   };
   //---------------------------------------------------------------
 
   return (
     <div className="containerLanding">
 
-      <button onClick={butonsubmit}>
-        TodosLosUsuarios
-      </button>
+  
 
       <div className="containerForm">
         <div

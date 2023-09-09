@@ -7,12 +7,12 @@ import Tabs from 'react-bootstrap/Tabs';
 
 
 const Home = () => {
-  const visitor = useSelector((state) => state.visitor);
+  const visitor = useSelector((state) => state.visitor.name);
   return (
     <div className="backgroundImage">
 <button onClick={goBack}> Atras </button>
     <div className="containerHome">
-
+<h1>BIENVENIDO :{visitor}</h1>
 {console.log(visitor)}
     <Tabs
       defaultActiveKey="profile"

@@ -1,22 +1,26 @@
-
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector} from "react-redux";
 import { useNavigate } from "react-router-dom";
-import {postVisit, getVisit} from "../../redux/vistHandler";
-import ('./Landing.css')
+import { postVisit, postVisitNull } from "../../redux/vistHandler";
+import "./Landing.css";
+import {addVisitor} from '../../redux/visitorSlice'
 
- 
 
 
 
 const Landing = () => {
   //----------------------ESTADO--------------------------
+const allVisit = useSelector((state)=> state.visitor.allVisit)
 
+console.log(allVisit)
   const [visitData, setVisitData] = useState({
-    name:" ",
+    name: "",
+  });
+
+  const [errors, setErrors] = useState({
+    name: "",
   });
   //---------------------VARIABLES------------------------
 
@@ -25,13 +29,17 @@ const Landing = () => {
   const navigate = useNavigate();
 
   //-----------------HANDLE CHANGE------------------------
- 
+
   const handleChange = (e) => {
-   
-    setVisitData({ ...visitData,[e.target.name]: e.target.value,
-    });
+    setVisitData({ ...visitData, [e.target.name]: e.target.value });
+    setErrors(
+    {...errors,
+        [e.target.name]: e.target.value,
+      }
+    );
   };
-  //-----------------SEND EMAIL----------------------------
+
+  //--------------------SEND EMAIL----------------------------
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -51,51 +59,91 @@ const Landing = () => {
         }
       );
   };
-  //----------------NAVIGATE------------------------
+  //----------------------------NAVIGATE------------------------
   const goToHomePage = () => {
     navigate("/home");
   };
-  //--------------------------------------------------
+  //-------------------------HANDLE SUBMIT-------------------------
   const handleSubmit = (e) => {
+    
     e.preventDefault();
-  {/*sendEmail(e);*/}
-    goToHomePage()
-    dispatch(postVisit());
-   };
+    if(errors.name){
+      {
+        /*sendEmail(e);*/
+      }
+      goToHomePage();
+      dispatch(postVisit(visitData))
+      dispatch(addVisitor(visitData))
+    }
+    }
+   
 
-const butonsubmit =()=>{
-  dispatch(getVisit())
-}
-  //---------------------------------------------------
+
+
+  //-------------------------HANDLE CLICK-------------------------------
+  const handleClick = () => {
+    dispatch(postVisitNull())
+  };
+  //---------------------------------------------------------------
 
   return (
     <div className="containerLanding">
-<button type="submit" onSubit={butonsubmit}>TodosLosUsuarios</button>
+
+  
+
       <div className="containerForm">
-      <h1>Hola mi nombre es Magali</h1>
-      <h1 className="efect">Cual es el tuyo ? </h1>
-      <p>Podes escribirlo aqui</p>
+        <div
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="300"
+        >
+     
+          <h1>Hola </h1>
+        </div>
+        <div
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="600"
+        >
+     
+          <h4>mi nombre es Magali</h4>
+        </div>
+        <div
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        >
+          <h3>Cual es el tuyo ? </h3>
+        </div>
 
-      <form id='LandingForm' ref={form} onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          value={visitData.name}
-          onChange={handleChange}
-        />
-       
-        <button className='botonElegante' type="submit"> Enviar</button>
-        <div className="dot"> 
-         </div>
-       
+        <p>Podes escribirlo aqui</p>
 
-         <p><a href="/home" type="submit">Prefiero no hacerlo</a></p>
-    
-      </form>
+        <form id="LandingForm" ref={form} onSubmit={handleSubmit}>
+          <input
+          placeholder="Tu nombre aqui"
+            className="EstiloInput"
+            type="text"
+            name="name"
+            value={visitData.name}
+            onChange={handleChange}
+          />
+
+          <button className="botonElegante" type="submit">
+            Enviar
+          </button>
+        </form>
+        <p>
+          <a href="/home" onClick={handleClick} type="submit">
+            Prefiero no hacerlo
+          </a>
+        </p>
+        <p>
+          Quiero que se considere este profolio como una muestra de mis
+          habilidades en programacion.
+        </p>
       </div>
     </div>
   );
 };
-
 
 export default Landing;

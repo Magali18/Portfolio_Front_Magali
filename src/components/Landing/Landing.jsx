@@ -1,20 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { postVisit, postVisitNull } from "../../redux/vistHandler";
 import "./Landing.css";
-import {addVisitor} from '../../redux/visitorSlice'
-
-
-
+import { addVisitor } from "../../redux/visitorSlice";
 
 const Landing = () => {
   //----------------------ESTADO--------------------------
-const allVisit = useSelector((state)=> state.visitor.allVisit)
+  const allVisit = useSelector((state) => state.visitor.allVisit);
 
-console.log(allVisit)
+  console.log(allVisit);
   const [visitData, setVisitData] = useState({
     name: "",
   });
@@ -32,11 +29,7 @@ console.log(allVisit)
 
   const handleChange = (e) => {
     setVisitData({ ...visitData, [e.target.name]: e.target.value });
-    setErrors(
-    {...errors,
-        [e.target.name]: e.target.value,
-      }
-    );
+    setErrors({ ...errors, [e.target.name]: e.target.value });
   };
 
   //--------------------SEND EMAIL----------------------------
@@ -65,62 +58,29 @@ console.log(allVisit)
   };
   //-------------------------HANDLE SUBMIT-------------------------
   const handleSubmit = (e) => {
-    
     e.preventDefault();
-    if(errors.name){
+    if (errors.name) {
       {
         /*sendEmail(e);*/
       }
       goToHomePage();
-      dispatch(postVisit(visitData))
-      dispatch(addVisitor(visitData))
+      dispatch(postVisit(visitData));
+      dispatch(addVisitor(visitData));
     }
-    }
-   
-
-
+  };
 
   //-------------------------HANDLE CLICK-------------------------------
   const handleClick = () => {
-    dispatch(postVisitNull())
+    dispatch(postVisitNull());
   };
   //---------------------------------------------------------------
 
   return (
-    <div className="containerLanding">
-
-  
-
+    <div>
       <div className="containerForm">
-        <div
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="300"
-        >
-     
-          <h1>Hola </h1>
-        </div>
-        <div
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="600"
-        >
-     
-          <h4>mi nombre es Magali</h4>
-        </div>
-        <div
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="1000"
-        >
-          <h3>Cual es el tuyo ? </h3>
-        </div>
-
-        <p>Podes escribirlo aqui</p>
-
         <form id="LandingForm" ref={form} onSubmit={handleSubmit}>
           <input
-          placeholder="Tu nombre aqui"
+            placeholder="Tu nombre aqui"
             className="EstiloInput"
             type="text"
             name="name"
@@ -129,7 +89,7 @@ console.log(allVisit)
           />
 
           <button className="botonElegante" type="submit">
-            Enviar
+            START
           </button>
         </form>
         <p>

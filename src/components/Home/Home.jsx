@@ -7,6 +7,7 @@ import FotoPerfil from '../../image/Screenshot_7.png'
 
 const Home = () => {
   const visitor = useSelector((state) => state.visitor.name);
+  const count = useSelector((state)=> state.visitor.count)
 
   return (
     <div className="Home">
@@ -15,7 +16,7 @@ const Home = () => {
       <img src={FotoPerfil} alt="" />
       <h1 >Magali Pereyra </h1>
       </div>
-      <h1 className="component2">Bienvenido : {visitor? visitor:'Usuario N°'}</h1>
+      <h1 className="component2">Bienvenido : {visitor ? visitor:` Usuario N° ${count}`}</h1>
     </div>
   );
 };

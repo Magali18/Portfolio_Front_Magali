@@ -5,13 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { postVisit, postVisitNull } from "../../redux/vistHandler";
 import "./Landing.css";
-import { addVisitor } from "../../redux/visitorSlice";
+import { addVisitor, countMas } from "../../redux/visitorSlice";
 
 const Landing = () => {
   //----------------------ESTADO--------------------------
-  const allVisit = useSelector((state) => state.visitor.allVisit);
 
-  console.log(allVisit);
   const [visitData, setVisitData] = useState({
     name: "",
   });
@@ -59,6 +57,7 @@ const Landing = () => {
   //-------------------------HANDLE SUBMIT-------------------------
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (errors.name) {
       {
         /*sendEmail(e);*/
@@ -70,7 +69,10 @@ const Landing = () => {
   };
 
   //-------------------------HANDLE CLICK-------------------------------
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    goToHomePage();
+    dispatch(countMas());
     dispatch(postVisitNull());
   };
   //---------------------------------------------------------------
@@ -93,7 +95,7 @@ const Landing = () => {
           </button>
         </form>
         <p>
-          <a href="/home" onClick={handleClick} type="submit">
+          <a href="" onClick={handleClick}>
             Prefiero no hacerlo
           </a>
         </p>

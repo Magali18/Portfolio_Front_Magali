@@ -26,4 +26,12 @@
       .component1{
         margin-top: 100px;
         font-size: 5%;
+  
       }
+      @media screen and (max-width: 700px){
+        .Home{
+          display:inline-block;
+
+        }
+      }
+    

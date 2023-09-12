@@ -1,9 +1,10 @@
 import { useSelector } from "react-redux";
 import "./Home.css";
-import IconTecnologi from "../IconTech/icon";
+import IconTecnologi from "../../components/IconTech/icon";
 import goBack from "../../utils/goBack";
-import NavBar from "../Nav/Nav";
+import NavBar from "../../components/Nav/Nav";
 import FotoPerfil from '../../image/Screenshot_7.png'
+import Proyecto from '../../components/Proyectos/Proyecto'
 
 const Home = () => {
   const visitor = useSelector((state) => state.visitor.name);
@@ -12,11 +13,17 @@ const Home = () => {
   return (
     <div className="Home">
 <button onClick={goBack}> Atras</button>
+
       <div className="component1" > 
       <img src={FotoPerfil} alt="" />
-      <h1 >Magali Pereyra </h1>
+      <h3 >Magali Pereyra </h3>
+     
       </div>
-      <h1 className="component2">Bienvenido : {visitor ? visitor:` Usuario N° ${count}`}</h1>
+      <div  className="component2"> 
+      <h2>Bienvenido : {visitor ? visitor :` Usuario N° ${count}`}</h2>
+      <IconTecnologi></IconTecnologi>
+      <Proyecto></Proyecto>
+      </div>
     </div>
   );
 };

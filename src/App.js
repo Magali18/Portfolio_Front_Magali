@@ -1,12 +1,12 @@
-import Landing from "./components/Landing/Landing";
-import Home from "./components/Home/Home";
+import Landing from "./views/Landing/Landing";
+import Home from "./views/Home/Home";
 
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div class='appCont'>
+    <div className='appCont'>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home/>} />

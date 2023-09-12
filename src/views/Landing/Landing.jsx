@@ -7,6 +7,7 @@ import { postVisit, postVisitNull } from "../../redux/vistHandler";
 import "./Landing.css";
 import { addVisitor, countMas } from "../../redux/visitorSlice";
 
+
 const Landing = () => {
   //----------------------ESTADO--------------------------
 

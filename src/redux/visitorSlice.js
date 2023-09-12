@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   name: "",
-  count : 0
+  count : 87
 
 };
 export const visitorSlice = createSlice({
@@ -10,8 +10,11 @@ export const visitorSlice = createSlice({
   initialState,
   reducers: {
     addVisitor: (state, action) => {
-      const {name} = action.payload;
-      state.name = name;
+      state.name = action.payload.name
+
+    
+     
+  
     },
   
   countMas:(state,action)=>{

@@ -1,31 +1,12 @@
-import {
-  PDFDownloadLink,
-  Document,
-  Page,
-  PDFViewer,
-} from "@react-pdf/renderer";
-import CVPDF from "../document/Curriculum vitae - Magali Pereyra.pdf";
-
-const pdf = () => {
-  return (
-  
-        <div>
-          <PDFViewer>
-            <CVPDF />
-          </PDFViewer>
-        </div>
-
-  );
-};
-console.log(pdf())
+import resume from '../document/CvMagaliPereyra.pdf'
 const PDF = () => {
   
 
   return (
     <div>
-      <PDFDownloadLink document={CVPDF} fileName="Cv_Develop_MagaliPereyra.pdf">
+      <a href={resume} download='MagaliPereyra.pdf'>
         <button>Descargar_CV_PDF.</button>
-      </PDFDownloadLink>
+        </a>
     </div>
   );
 };

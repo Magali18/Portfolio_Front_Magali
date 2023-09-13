@@ -10,10 +10,7 @@
         width: 200px;
        
     }
-    .Home button{
-        width: 10px;
-        height: 10px;
-    }
+  
       .component2{
         flex: 4;
         margin: 10px; /* Espaciado entre los componentes */

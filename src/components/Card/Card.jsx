@@ -4,7 +4,7 @@ import "./Card.css"
 
 const Card = ({info}) => {
  const{title,description,image,demo} = info
-console.log(info)
+
 
   return (
     <div className="card-single">

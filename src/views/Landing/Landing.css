@@ -1,9 +1,10 @@
 
 .containerForm{
-text-align: center;
+
+text-align:left
 }
 .botonElegante{
-  background-color: rgba(180, 71, 175, 0.302);
+  background-color: rgba(214, 52, 206, 0.302);
   color:rgb(168, 28, 190);
     margin-left: 2%;
     border: 0 solid;

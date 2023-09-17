@@ -1,34 +1,79 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import './Nav.css'
-const NavBar =()=>{
-    return (
-        <div>
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">Magali Pereyra</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Sobre mi</Nav.Link>
-    
-            <NavDropdown title="" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Experiencia</NavDropdown.Item>
-              
-              <NavDropdown.Item href="#action/3.3">Educacion</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4"> Curriculum </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+import React, { useState } from "react";
+import {
+  Container,
+  LogoContainer,
+  Wrapper,
+  Menu,
+  MenuItem,
+  MenuItemLink,
+  MobileIcon,
+} from "./Navbar.elements";
+import {
+  FaBattleNet,
+  FaBars,
+  FaTimes,
+  FaHome,
+  FaUserAlt,
+  FaBriefcase,
+  FaGlasses,
+} from "react-icons/fa";
+import { IconContext } from "react-icons";
 
+const Navbar = () => {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
+  return (
+    <Container>
+      <Wrapper>
+        <IconContext.Provider value={{ style: { fontSize: "2em" } }}>
+          <LogoContainer>
+            <FaBattleNet />
+            <p>Vector -</p>
+            <p>F(X)</p>
+          </LogoContainer>
 
-        </div>
-    )
-}
-export default NavBar;
+          <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}>
+            {showMobileMenu ? <FaTimes /> : <FaBars />}
+          </MobileIcon>
+
+          <Menu open={showMobileMenu}>
+            <MenuItem>
+              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                <div>
+                  <FaHome />
+                  HOME
+                </div>
+              </MenuItemLink>
+            </MenuItem>
+            <MenuItem>
+              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                <div>
+                  <FaUserAlt />
+                  ABOUT ME
+                </div>
+              </MenuItemLink>
+            </MenuItem>
+            <MenuItem>
+              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                <div>
+                  <FaBriefcase />
+                  PORTFOLIO
+                </div>
+              </MenuItemLink>
+            </MenuItem>
+            <MenuItem>
+              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                <div>
+                  <FaGlasses />
+                  CONTACT ME
+                </div>
+              </MenuItemLink>
+            </MenuItem>
+          </Menu>
+        </IconContext.Provider>
+      </Wrapper>
+    </Container>
+  );
+};
+
+export default Navbar;

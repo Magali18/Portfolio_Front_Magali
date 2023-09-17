@@ -7,13 +7,13 @@
   display: none !important;
 }
 body {
-    font-family: arial, helvetica;
+    font-family:'pacifico';
   }
   
   h3 {
     font-size: 5em;
     text-align: center;
-    color:#ee4ca240;
+    color:#a83886a8;
     font-weight: 700;
   }
   

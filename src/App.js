@@ -7,20 +7,8 @@ import Proyectos from "./components/Proyectos/Proyecto"
 
 const anchors = ["firstPage", "secondPage", "thirdPage"];
 
-const App = () => (
-  <ReactFullpage
-    anchors={anchors}
-    navigation
-    navigationTooltips={anchors}
-    navigat
-    sectionsColor={["#ee4ca2bd","#ee4ca240","#ee4ca2bd","#39ab87" ]}
-
-    onLeave={(origin, destination, direction) => {
-      console.log("onLeave event", { origin, destination, direction });
-    }}
-    render={({ state, fullpageApi }) => {
-      console.log("render prop change", state, fullpageApi);
-
+const App = () => {
+ 
       return (
         <div>
           <div className="section"><h3> <Landing/></h3></div>
@@ -31,7 +19,6 @@ const App = () => (
      
         </div>
       );
-    }}
-  />
-);
+      }
+
 export default App;

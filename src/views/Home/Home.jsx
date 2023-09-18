@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
-import "./Home.css";
-import IconTecnologi from "../../components/IconTech/icon";
-import goBack from "../../utils/goBack";
+import "./Home.css"
+import { VscGithub, VscTwitter,VscCallIncoming} from "react-icons/vsc";
+
+
 
 import FotoPerfil from '../../image/Screenshot_10.png'
 
@@ -12,20 +13,27 @@ const Home = () => {
 
   return (
     <div>
-      <button onClick={goBack}> Atras</button>
-      <h2>Bienvenido : {visitor ? visitor :` Usuario N° ${count}`}</h2>
-    <div className="Home">
-      <div className="component1" > 
-      <img src={FotoPerfil} alt="" />
-      <h3 >Magali Pereyra </h3>
 
+  
+    <div className="Home">
+      <div className="container" >
+        <div className="imgHover">
+      <img src={FotoPerfil} alt="ImagenPerfil" />
       </div>
-      <div  className="component2"> 
-     
-      <IconTecnologi/>
+      <h3 >Magali Pereyra</h3>
       
+      <h4>  ¡No dudes en contactar conmigo y descubrir todo lo que tengo para ofrecer! </h4>
+
+   <div className="containerStyleIcon"> 
+    <h3><VscGithub /> </h3>  
+     <h3><VscTwitter/></h3> 
+      <h3><VscCallIncoming/> </h3> 
       </div>
-    </div>
+</div>
+   
+      </div>
+     
+
     </div>
   );
 };

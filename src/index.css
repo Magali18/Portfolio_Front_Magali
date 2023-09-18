@@ -1,31 +1,15 @@
 
+      @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 
-.fp-watermark {
-  display: none !important;
-}
-.fp-watermark > a {
-  display: none !important;
-}
-body {
-    font-family: arial, helvetica;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
-  h3 {
-    font-size: 5em;
-    text-align: center;
-    color:#ee4ca240;
-    font-weight: 700;
-  }
-  
-  .section{
-    height: 100vh;
-    background-color: rgba(223, 171, 238, 0.384);
-
-    
-    
+  body {
+    overflow-x: hidden;
+    font-family:'pacifico';
+    color:#f0f8ff;
   }
  
-  .fp-section {
-    text-align: center;
-  }
-   

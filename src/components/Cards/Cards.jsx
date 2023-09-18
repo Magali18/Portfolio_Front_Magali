@@ -1,17 +1,17 @@
 
-import Card from "../Card/Card"
+import Cardk from "../Card/Card"
 import './Crads.css'
 import info from '../Proyectos/info'
 const Cards = () => {
   return (
-    <div>
-      <div >
+  
+      <div>
        {info.map((infoItem, index) => (
-        <Card key={index} info={infoItem} />
+        <Cardk key={index} info={infoItem} />
       )) } 
      
    
-      </div>
+   
     </div>
   );
 };

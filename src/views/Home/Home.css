@@ -14,7 +14,7 @@
       margin-left: -30px;
      }
      img:hover{
-      border: 2px solid #ea137b;
+      
       cursor: pointer;
      }
    
@@ -22,7 +22,7 @@
      
      .container h3{
       margin-left: -6%;
-      color:    #eb3b90;  
+      color:    #ea137b;  
   transition: color 0.3s ease;
   transition: font-size 0.3s ease;
   font-size: 60px;
@@ -36,7 +36,7 @@
     } 
 
      h3:hover {
-      color: #ea137b; 
+      color: #eb3b90; 
       cursor: pointer;
         
     }
@@ -56,7 +56,8 @@
         }
         .container img{
           width: 200px;
-          margin-left: -30%
+          margin-left: -30%;
+          border: 3px solid #ea137b;
         }
         .container h3{
           font-size: 35px;
@@ -69,6 +70,7 @@
         .containerStyleIcon{
           margin-left: -30%
         }
+      
       };
 .containerStyleIcon {
   white-space: nowrap; /* Evita que los elementos se rompan en varias líneas */

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Container,
   LogoContainer,
@@ -28,9 +29,7 @@ const Navbar = () => {
       <Wrapper>
         <IconContext.Provider value={{ style: { fontSize: "2em" } }}>
           <LogoContainer>
-   
             <p></p>
-          
           </LogoContainer>
 
           <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}>
@@ -38,22 +37,30 @@ const Navbar = () => {
           </MobileIcon>
 
           <Menu open={showMobileMenu}>
-            <MenuItem>
-              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                <div>
-                  <FaHome />
-                  HOME
-                </div>
-              </MenuItemLink>
-            </MenuItem>
-            <MenuItem>
-              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                <div>
-                  <FaUserAlt />
-                  ABOUT ME
-                </div>
-              </MenuItemLink>
-            </MenuItem>
+            <Link to="/">
+              <MenuItem>
+                <MenuItemLink
+                  onClick={() => setShowMobileMenu(!showMobileMenu)}
+                >
+                  <div>
+                    <FaHome />
+                    HOME
+                  </div>
+                </MenuItemLink>
+              </MenuItem>
+            </Link>
+            <Link to="/abaut">
+              <MenuItem>
+                <MenuItemLink
+                  onClick={() => setShowMobileMenu(!showMobileMenu)}
+                >
+                  <div>
+                    <FaUserAlt />
+                    ABOUT ME
+                  </div>
+                </MenuItemLink>
+              </MenuItem>
+            </Link>
             <MenuItem>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>

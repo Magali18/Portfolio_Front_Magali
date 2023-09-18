@@ -76,6 +76,7 @@ export const MenuItem = styled.li`
     display: flex;
     justify-content: ce;
     align-items: center;
+    text-decoration: none;
   }
 `;
 
@@ -93,8 +94,8 @@ text-decoration: none;
   cursor: pointer;
   transition: 0.5s all ease;
   &:hover {
-    color: #ea049dfa;
-    background-color: #ef72bfca;
+    color: #a014f6fa;
+    background-color: #f3f0f557;
     transition: 0.5s all ease;
     div {
       svg {

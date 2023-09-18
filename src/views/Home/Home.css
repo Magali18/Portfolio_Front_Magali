@@ -1,38 +1,27 @@
 
-    @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
-
+ @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
     .Home{
-      
-      font-family:'pacifico','lobster';
-        display: flex; /* Utiliza un contenedor flexible para dividir la pantalla */
-        width: 99%;
-        height: 100%; /* Ancho del contenedor (ajusta según tus necesidades) */
-        margin: 0 auto; /* Centra el contenedor horizontalmente en el centro de la página */
-        padding: 20px; /* Espaciado interno dentro del contenedor (ajusta según tus necesidades) */
-      color: aliceblue;
-        backdrop-filter: blur(9px) saturate(90%);
-        -webkit-backdrop-filter: blur(9px) saturate(90%);
-        background-color: rgba(95, 192, 228, 0.332);
-        border-radius: 12px;
-        border: 1px solid rgba(21, 14, 21, 0.61);
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-   
+    margin-left: 40%;
+    font-family: 'pacifico';
     }
-
      .container img{
       border-radius: 100%;
       width: 350px;
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), -3px -3px 5px rgba(245, 157, 210, 0.5);
       transition: transform 0.5s ease;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      margin-top: 70px;
+      margin-left: -30px;
      }
      img:hover{
       border: 2px solid #ea137b;
       cursor: pointer;
      }
+   
 
      
      .container h3{
+      margin-left: -6%;
       color:    #eb3b90;  
   transition: color 0.3s ease;
   transition: font-size 0.3s ease;
@@ -40,6 +29,7 @@
   margin-top: 7%;
      }
      .container h4{
+    margin-left: -17%;
     margin-top: 7%; 
     margin-bottom: 7%;
     color: black; 
@@ -62,9 +52,32 @@
         .Home{
           display:inline-block;
 
+
         }
-      }
-      .lolo{
-        color: #4eb0d1da;
-      }
+        .container img{
+          width: 200px;
+          margin-left: -30%
+        }
+        .container h3{
+          font-size: 35px;
+          margin-left:-40%;
+        }
+        .container h4{
+          font-size: 12px;
+          margin-left:-75%;
+        }
+        .containerStyleIcon{
+          margin-left: -30%
+        }
+      };
+.containerStyleIcon {
+  white-space: nowrap; /* Evita que los elementos se rompan en varias líneas */
+}
+
+.containerStyleIcon h3 {
+  display: inline-block; /* Coloca los elementos uno al lado del otro */
+  margin: 0; /* Elimina el margen predeterminado de los h3 */
+  padding: 10px; /* Añade espacio alrededor de los h3 si lo deseas */
+  transform: scale(1.1);
+}
    

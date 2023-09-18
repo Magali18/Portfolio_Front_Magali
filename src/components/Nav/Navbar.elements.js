@@ -1,10 +1,20 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
+
+
+const GlobalStyles = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+`;
 export const Container = styled.div`
+
+backdrop-filter: blur(10px);
   width: 100%;
   height: 70px;
-  background-color: #ea139b; ;
+  background-color: #f01db5ca; ;
+
 `;
+
+
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -15,6 +25,7 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   margin: auto;
 `;
+
 
 export const LogoContainer = styled.div`
   margin-left: 0.5rem;
@@ -69,20 +80,21 @@ export const MenuItem = styled.li`
 `;
 
 export const MenuItemLink = styled.a`
+text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   padding: 0.5rem 2.5rem;
-  color: #64b2ff;
+  color: #fff;
   font-family: sans-serif;
   font-size: 1rem;
   font-weight: 300;
   cursor: pointer;
   transition: 0.5s all ease;
   &:hover {
-    color: #fff;
-    background-color: #e0792a;
+    color: #ea049dfa;
+    background-color: #ef72bfca;
     transition: 0.5s all ease;
     div {
       svg {
@@ -98,7 +110,7 @@ export const MenuItemLink = styled.a`
     align-items: center;
     svg {
       display: none;
-      fill: #e0792a;
+      fill: #e9fbffda;
       margin-right: 0.5rem;
     }
   }
@@ -130,7 +142,7 @@ export const MenuItemLink = styled.a`
       }
     }
   }
-  @media screen and (max-width: 260px) {
+  @media screen and (max-width: 700px) {
     div {
       width: 100%;
       justify-content: left;
@@ -148,7 +160,7 @@ export const MobileIcon = styled.div`
     align-items: center;
     cursor: pointer;
     svg {
-      fill: #ea137b;
+      fill: #f0f8ff;
       margin-right: 0.5rem;
     }
   }

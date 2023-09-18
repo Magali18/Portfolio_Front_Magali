@@ -3,6 +3,7 @@ import {
   Container,
   LogoContainer,
   Wrapper,
+  Wrapper1,
   Menu,
   MenuItem,
   MenuItemLink,
@@ -27,9 +28,9 @@ const Navbar = () => {
       <Wrapper>
         <IconContext.Provider value={{ style: { fontSize: "2em" } }}>
           <LogoContainer>
-            <FaBattleNet />
-            <p>Vector -</p>
-            <p>F(X)</p>
+   
+            <p></p>
+          
           </LogoContainer>
 
           <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}>

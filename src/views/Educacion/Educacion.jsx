@@ -2,8 +2,8 @@ import PDF from '../../components/PDF/Pdf'
 const Educacion =()=>{
     return(
         <div className='styleEducacion'>
-            
-<PDF></PDF>
+         <h1>EDUCACION</h1>
+
         </div>
     )
 };

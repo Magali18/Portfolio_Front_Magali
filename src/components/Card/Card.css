@@ -1,3 +1,15 @@
-.containerCard{
-    width: 500px;
-}
+.card-single{
+    margin: 50px 1px 1px 1px;
+      display:flex;
+      flex-direction:column;
+      width: 500px; /* Ancho de la tarjeta */
+      height: 400%; /* Alto de la tarjeta */
+      cursor:pointer;
+   
+
+  }
+  .card-single img {
+    width: 500px; /* Ancho de la tarjeta */
+      height: 300px; 
+  }
+ 

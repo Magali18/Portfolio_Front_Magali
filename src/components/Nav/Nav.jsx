@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {
   Container,
   LogoContainer,
@@ -22,6 +22,23 @@ import {
 import { IconContext } from "react-icons";
 
 const Navbar = () => {
+  const navigate = useNavigate()
+
+  const handleLanding = () => {
+    navigate('/');
+  };
+  
+  const handleAbaut = () => {
+    navigate('/abaut');
+  };
+  
+  const handlePortfolio = () => {
+    navigate('/portfolio');
+  };
+    const handleContact = () => {
+    navigate('/lolo');
+  };
+
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   return (
@@ -37,8 +54,8 @@ const Navbar = () => {
           </MobileIcon>
 
           <Menu open={showMobileMenu}>
-            <Link to="/">
-              <MenuItem>
+          
+              <MenuItem onClick={handleLanding}>
                 <MenuItemLink
                   onClick={() => setShowMobileMenu(!showMobileMenu)}
                 >
@@ -48,9 +65,9 @@ const Navbar = () => {
                   </div>
                 </MenuItemLink>
               </MenuItem>
-            </Link>
-            <Link to="/abaut">
-              <MenuItem>
+            
+       
+              <MenuItem onClick={handleAbaut}>
                 <MenuItemLink
                   onClick={() => setShowMobileMenu(!showMobileMenu)}
                 >
@@ -60,8 +77,8 @@ const Navbar = () => {
                   </div>
                 </MenuItemLink>
               </MenuItem>
-            </Link>
-            <MenuItem>
+           
+            <MenuItem onClick={handlePortfolio}> 
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaBriefcase />
@@ -69,7 +86,7 @@ const Navbar = () => {
                 </div>
               </MenuItemLink>
             </MenuItem>
-            <MenuItem>
+            <MenuItem onClick={handleContact}>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaGlasses />

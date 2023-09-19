@@ -1,17 +1,20 @@
 import resume from '../document/CvMagaliPereyra.pdf'
 import './pdf.css'
-import {BiSolidFilePdf} from "react-icons/bi";
+import { TfiSave } from "react-icons/tfi";
 
 const PDF = () => {
   
 
   return (
     <div className='loli'>
-      <h1> <BiSolidFilePdf/></h1>
  
-      <a href={resume} download='MagaliPereyra.pdf'>
-        <button>Descargar</button>
+ 
+      <p>Podes DESCARGAR los detalles de mi experiencia laboral y educacion en formato PDF haciendo click aqui :
+      <a href={resume} download='MagaliPereyra.pdf' ><TfiSave/>
+
+       
         </a>
+        </p>
     </div>
   );
 };

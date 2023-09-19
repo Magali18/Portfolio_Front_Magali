@@ -6,8 +6,9 @@ const Educacion =()=>{
     return(
         <div className='styleEducacion'>
          <h1>Mis Proyectos</h1>
+         <Pdf/>
          <Cards></Cards>
-<Pdf/>
+
         </div>
     )
 };

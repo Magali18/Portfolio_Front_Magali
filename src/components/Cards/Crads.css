@@ -4,6 +4,16 @@
     display: grid;
     grid-template-columns: repeat(6, minmax(250px, 1fr));
     gap: 300px;
-    
 
 }
+
+@media screen and (max-width: 900px){
+    .cards-container{
+         display:inline-block;
+         margin-left: -15%
+
+
+    }
+   
+  
+  };

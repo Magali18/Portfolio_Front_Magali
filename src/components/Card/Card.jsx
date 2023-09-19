@@ -1,11 +1,17 @@
 import './Card.css'
-
+import {AiFillYoutube} from  "react-icons/ai";
 
 
 
 function Card ({info}) {
-  const {title,description,image, tech} = info;
+  const {title,description,image, tech,deploy,demo} = info;
 
+  const onClickDemo = () => {
+    window.open(demo, '_blank');
+  }
+  const onClickDeploy =()=>{
+    window.open(deploy, '_blank')
+  }
 
   return (
     <div className='bodyCard' > 
@@ -21,8 +27,8 @@ function Card ({info}) {
   <h1 className='iconTech'>  {tech} </h1>
 
    <div >
-<button>Ver demo</button>
- <button>Ver deploy</button> 
+<button onClick={onClickDemo}>Ver demo <AiFillYoutube/></button>
+ <button onClick={onClickDeploy}>Ver deploy</button> 
   </div>
    </div>
    </div>

@@ -4,8 +4,8 @@
 }
 
 .loli a{
-  font-size: 200%;
-  
+  font-size: 150%;
+  margin-left: 10px;
   color:rgb(232, 2, 171);
     
   }
@@ -14,10 +14,16 @@
   }
   .loli a:hover {
 
-    border: 1px solid;
-    color: #11ec4b;
+ 
+    color: #04ab41;
     box-shadow: inset 0 0 20px rgba(121, 236, 138, 0.772), 0 0 20px rgba(255, 255, 255, 0.2);
     outline-offset: 15px;
     outline-color: rgba(255, 255, 255, 0);
     text-shadow: 1px 1px 2px #f9f1f1;
   }
+@media screen and (max-width: 700px){
+  .loli p{
+    font-size: small;
+  }
+
+}

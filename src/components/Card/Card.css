@@ -47,5 +47,21 @@
     text-shadow: 1px 1px 2px #f9f1f1;
   }
  
+@media screen and (max-width: 900px){
+  .card-single{
+    width: 350px; /* Ancho de la tarjeta */
+    height: 20%; /* Alto de la tarjeta */
+
+  }
+  .card-single img{
+    width: 350px; 
+    height: 100%; 
+  }
+  .card-single h1 {
+    font-size: 25px
+  }
+ 
+
+};
   
   

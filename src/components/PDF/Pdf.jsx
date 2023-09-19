@@ -1,6 +1,6 @@
 import resume from '../document/CvMagaliPereyra.pdf'
 import './pdf.css'
-import {BiSave} from "react-icons/bi";
+import { TfiSave } from "react-icons/tfi";
 
 const PDF = () => {
   
@@ -10,7 +10,7 @@ const PDF = () => {
  
  
       <p>Podes DESCARGAR los detalles de mi experiencia laboral y educacion en formato PDF haciendo click aqui :
-      <a href={resume} download='MagaliPereyra.pdf' ><BiSave/>
+      <a href={resume} download='MagaliPereyra.pdf' ><TfiSave/>
 
        
         </a>

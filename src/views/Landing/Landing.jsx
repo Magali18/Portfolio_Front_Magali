@@ -31,7 +31,7 @@ const Landing = () => {
   };
   return (
     <div>
-      <div className="">
+      <div className="containerForm">
         <h1>LANDING</h1>
       </div>
     </div>

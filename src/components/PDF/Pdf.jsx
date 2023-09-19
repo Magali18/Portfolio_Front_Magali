@@ -7,9 +7,10 @@ const PDF = () => {
 
   return (
     <div className='loli'>
-      <BiSolidFilePdf/>
+      <h1> <BiSolidFilePdf/></h1>
+ 
       <a href={resume} download='MagaliPereyra.pdf'>
-        <button>Descargar.pdf</button>
+        <button>Descargar</button>
         </a>
     </div>
   );

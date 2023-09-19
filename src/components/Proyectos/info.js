@@ -1,4 +1,4 @@
-import PI  from '../../image/Screenshot_8.png'
+import PI  from '../../image/Screenshot_14.png'
 import PF from '../../image/Screenshot_12.png' 
 import { BiLogoPostgresql,BiLogoMongodb,BiLogoNodejs,BiLogoHtml5,BiLogoJavascript,BiLogoFirebase,BiLogoCss3,BiLogoReact,
 BiLogoRedux,BiCloudRain,BiLogoTailwindCss} from "react-icons/bi";

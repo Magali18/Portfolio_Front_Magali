@@ -1,4 +1,4 @@
-import PDF from '../../components/PDF/Pdf'
+
 import Cards from '../../../src/components/Cards/Cards'
 import  Pdf from '../../components/PDF/Pdf'
 import './Educacion.css'

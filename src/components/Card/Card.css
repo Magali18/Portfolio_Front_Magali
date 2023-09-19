@@ -1,15 +1,18 @@
 .card-single{
+ background-color: rgba(238, 130, 238, 0.297);
     margin: 50px 1px 1px 1px;
       display:flex;
       flex-direction:column;
       width: 500px; /* Ancho de la tarjeta */
-      height: 400%; /* Alto de la tarjeta */
+      height: 100%; /* Alto de la tarjeta */
       cursor:pointer;
-   
 
   }
   .card-single img {
     width: 500px; /* Ancho de la tarjeta */
       height: 300px; 
   }
- 
+ .iconTech{
+  color: rgb(167, 21, 131);
+  font-size: 50px;
+ }

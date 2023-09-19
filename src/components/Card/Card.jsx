@@ -19,10 +19,11 @@ function Card ({info}) {
    <h6>Tecnologias aplicadas:</h6>
 
   <h1 className='iconTech'>  {tech} </h1>
-   
-   <button>Ver demo</button>
-   <button>Ver deploy</button>
- 
+
+   <div >
+<button>Ver demo</button>
+ <button>Ver deploy</button> 
+  </div>
    </div>
    </div>
   );

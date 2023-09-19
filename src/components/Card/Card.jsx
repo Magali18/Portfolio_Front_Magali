@@ -1,47 +1,31 @@
-
-import Carousel from 'react-bootstrap/Carousel';
-
 import './Card.css'
 
-import PI  from '../../image/Screenshot_8.png'
-import PF from '../../image/Screenshot_12.png'
 
 
-function Cardk ({info}) {
 
-  const {title,description}= info
+function Card ({info}) {
+  const {title,description,image, tech} = info;
+
+
   return (
-    <div className=''> 
-    <Carousel data-bs-theme="dark">
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={PI}
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={PF}
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h5>Third slide label</h5>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-    </div>
+   <div className='card-single'>
+ <h1> {title}</h1> 
+    <img src={image} alt="imagen" />
+
+
+  
+   <p>{description}</p>
+   <h6>Tecnologias aplicadas:</h6>
+   {tech}
+   
+   <button>Ver demo</button>
+   <button>Ver deploy</button>
+ 
+
+   </div>
   );
 }
 
-export default Cardk;
+export default Card;
 
 

@@ -1,13 +1,13 @@
 
-import Cardk from "../Card/Card"
+import Card from "../Card/Card"
 import './Crads.css'
-import info from '../Proyectos/info'
+import info from '../Proyectos/info.js'
 const Cards = () => {
   return (
   
-      <div>
+      <div className="cards-container">
        {info.map((infoItem, index) => (
-        <Cardk key={index} info={infoItem} />
+        <Card key={index} info={infoItem} />
       )) } 
      
    

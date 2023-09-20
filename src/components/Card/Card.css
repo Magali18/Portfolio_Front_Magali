@@ -1,15 +1,67 @@
 .card-single{
+ background-color: rgba(152, 211, 231, 0.289);
     margin: 50px 1px 1px 1px;
       display:flex;
       flex-direction:column;
-      width: 500px; /* Ancho de la tarjeta */
-      height: 400%; /* Alto de la tarjeta */
+      width: 400px; /* Ancho de la tarjeta */
+      height: 100%; /* Alto de la tarjeta */
       cursor:pointer;
-   
+
 
   }
   .card-single img {
-    width: 500px; /* Ancho de la tarjeta */
-      height: 300px; 
+    width: 400px; /* Ancho de la tarjeta */
+      height: 200px; 
+  }
+   .card-single h1 {
+    font-size: 40px;
+
+  }
+ .iconTech{
+  color: rgb(167, 21, 131);
+  font-size: 50px;
+ }
+ .bodyCard button{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(227, 27, 245, 0.302);
+  color:rgb(245, 26, 245);
+    margin-left: 2%;
+    border: 0 solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(144, 8, 144, 0);
+    outline-offset: 0px;
+    text-shadow: none;
+    -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+            transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    outline-color: rgb(247, 8, 247);
+    outline-offset: 0px;
+  }
+  
+  .bodyCard button:hover {
+   
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(246, 232, 246, 0.772), 0 0 20px rgba(255, 255, 255, 0.2);
+    outline-offset: 15px;
+    outline-color: rgba(255, 255, 255, 0);
+    text-shadow: 1px 1px 2px #f9f1f1;
   }
  
+@media screen and (max-width: 900px){
+  .card-single{
+    width: 350px; /* Ancho de la tarjeta */
+    height: 20%; /* Alto de la tarjeta */
+
+  }
+  .card-single img{
+    width: 350px; 
+    height: 100%; 
+  }
+  .card-single h1 {
+    font-size: 25px
+  }
+ 
+
+};
+  
+  

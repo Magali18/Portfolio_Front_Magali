@@ -9,7 +9,7 @@ import FotoPerfil from "../../image/Screenshot_10.png";
 const Home = () => {
   const visitor = useSelector((state) => state.visitor.name);
   const count = useSelector((state) => state.visitor.count);
-
+  
   return (
     <div>
       <div className="Home">

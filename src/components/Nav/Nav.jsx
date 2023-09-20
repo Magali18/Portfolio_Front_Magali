@@ -25,18 +25,18 @@ const Navbar = () => {
   const navigate = useNavigate()
 
   const handleLanding = () => {
-    navigate('/');
+    navigate('/abaut');
   };
   
   const handleAbaut = () => {
-    navigate('/abaut');
+    navigate('/');
   };
   
   const handlePortfolio = () => {
     navigate('/portfolio');
   };
     const handleContact = () => {
-    navigate('/lolo');
+    navigate('/contact');
   };
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -55,7 +55,7 @@ const Navbar = () => {
 
           <Menu open={showMobileMenu}>
           
-              <MenuItem onClick={handleLanding}>
+              <MenuItem onClick={handleAbaut}>
                 <MenuItemLink
                   onClick={() => setShowMobileMenu(!showMobileMenu)}
                 >
@@ -67,7 +67,7 @@ const Navbar = () => {
               </MenuItem>
             
        
-              <MenuItem onClick={handleAbaut}>
+              <MenuItem onClick={ handleLanding}>
                 <MenuItemLink
                   onClick={() => setShowMobileMenu(!showMobileMenu)}
                 >

@@ -11,7 +11,8 @@ const Home = () => {
   const count = useSelector((state) => state.visitor.count);
   
   return (
-    <div>
+    <div className='imageContain'>
+      
       <div className="Home">
         <div className="container">
           <div className="imgHover">

@@ -1,5 +1,7 @@
-.containerBody{
 
+ @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+.containerBody{
+font-family:'pacifico';
     margin-top: 0%;
     background: url('../../image/b05d5fea77aca8b662e6d626b6ac172a.jpg');
     background-size:contain;
@@ -8,7 +10,7 @@ height: 880px;
 z-index: 0;
 
 }
-.containerBody form{
+.containerForm3{
     backdrop-filter: blur(2px) saturate(177%);
     -webkit-backdrop-filter: blur(2px) saturate(177%);
     background-color: rgba(17, 25, 40, 0.04);
@@ -16,18 +18,102 @@ z-index: 0;
     border: 1px solid rgba(255, 255, 255, 0.125);
     z-index: 0;
     margin-left: 25%;
-   padding: 100px;
-    width: 50%;
+   padding: 50px;
 
+
+    width: 800px;
+    overflow: hidden;
+    position: absolute;
+    top:37%;
+    left: 20%;
+    transform: translate(-30%, -30%);
+
+  
+    border-radius: 15px;
+    box-shadow: 7px 13px 37px rgba(0, 0, 0, .6);
+    box-shadow: 7px 13px 37px rgba(0, 0, 0, .8);
 }
-.inputMensaje{
-width: 70%;
-
-
-}
-.containerBody a{
+.containerForm3 a{
     color: lime;
 }
-.containerBody p{
-font-size: 30px;
+.styleheader{
+    color: rgba(0, 0, 0, 0.775);
+    width: 100%;
+ font-size: 40px;
+  background: #43c8ed44;
+  overflow: hidden;
+  position: relative;
+
+  display: block;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.colorIcono{
+    color: rgb(27, 245, 121);
+    font-size: 50px;
+}
+.contact{
+    padding: .8rem;
+    overflow: hidden;
+    
+}
+.contact input{
+    background-color:rgba(0, 255, 255, 0.079);
+    display: block;
+  width: 100%;
+  margin-bottom: 8px; 
+  border: none;
+  border-bottom: 2px solid #167bff;
+  margin-bottom: 10px;
+  font-size: 20px;
+  outline: none;
+  
+}
+.contact label{
+    color:aqua;
+    display: block;
+  width: 100%;
+  margin-bottom: 5px; 
+}
+.stylePfooter p{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact input::placeholder{
+color: rgba(247, 249, 249, 0.808);
+font-family: Arial, Helvetica, sans-serif;
+
+}
+.contact button{
+    margin-bottom: 10px;
+padding: 5px;
+    width: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(27, 201, 245, 0.395);
+    color:rgba(247, 239, 248, 0.975);
+      margin-left: 2%;
+      border: 0 solid;
+      box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+      outline: 1px solid;
+      outline-color: rgba(144, 8, 144, 0);
+      outline-offset: 0px;
+      text-shadow: none;
+      -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+              transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+      outline-color: rgb(8, 243, 247);
+      outline-offset: 0px;
+    }
+    
+    .contact button:hover {
+     
+      border: 1px solid;
+      box-shadow: inset 0 0 20px rgba(246, 232, 246, 0.772), 0 0 20px rgba(255, 255, 255, 0.2);
+      outline-offset: 15px;
+      outline-color: rgba(18, 202, 248, 0.97);
+      text-shadow: 1px 1px 2px #f9f1f1;
+}
+.Stylep{
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.645);
 }

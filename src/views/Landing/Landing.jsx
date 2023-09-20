@@ -35,9 +35,7 @@ const Landing = () => {
         
        <div className='container2'> 
        <h1> Hola, soy Magali</h1>
-       <h2> Full Stack Developer Junior</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolorem vero ad dicta id repudiandae fugit deleniti illum, necessitatibus illo officia aspernatur impedit iste fuga. Nam deserunt necessitatibus consequuntur delectus?
-        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur perferendis iste voluptatum, aperiam explicabo tempora quas ullam possimus nesciunt. Asperiores repudiandae deleniti ut dolores autem exercitationem consectetur, officia veniam. Modi.</h1>
+       <h2> Full Stack Developer Web Junior</h2>
        
       </div>
       </div>

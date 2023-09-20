@@ -1,8 +1,33 @@
 .containerBody{
+
+    margin-top: 0%;
     background: url('../../image/b05d5fea77aca8b662e6d626b6ac172a.jpg');
     background-size:contain;
 
 height: 880px;
 z-index: 0;
 
+}
+.containerBody form{
+    backdrop-filter: blur(2px) saturate(177%);
+    -webkit-backdrop-filter: blur(2px) saturate(177%);
+    background-color: rgba(17, 25, 40, 0.04);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    z-index: 0;
+    margin-left: 25%;
+   padding: 100px;
+    width: 50%;
+
+}
+.inputMensaje{
+width: 70%;
+
+
+}
+.containerBody a{
+    color: lime;
+}
+.containerBody p{
+font-size: 30px;
 }

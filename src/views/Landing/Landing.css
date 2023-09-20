@@ -8,21 +8,31 @@ z-index: 0;
 height: 880px;
 
 
-}
-/*.container2{
+}.container2{
   backdrop-filter: blur(2px) saturate(177%);
   -webkit-backdrop-filter: blur(2px) saturate(177%);
   background-color: rgba(17, 25, 40, 0.04);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   z-index: 0;
-} */ 
+  height: 880px;
+} 
+.container2 h2{
+  color: aliceblue;
+  font-family: 'pacifico';
+  font-size: 40px;
+  margin-left: 35%;
+
+}
 
 .container2 h1{
   font-family: 'pacifico';
-  color:    #fc1786; 
-  margin-left: 20%;
+  color:  #fc1786; 
+  margin-left: 43%;
+  margin-bottom:30px;
 }
+  
+
 
 .botonElegante{
   background-color: rgba(214, 52, 206, 0.302);

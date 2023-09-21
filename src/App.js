@@ -6,6 +6,7 @@ import Educacion from "./views/Educacion/Educacion";
 import Navbar from "./components/Nav/Nav";
 import { Route, Routes } from "react-router-dom";
 import emailjs from "@emailjs/browser";
+
 import React, { useEffect, useRef } from "react";
 
 const App = () => {

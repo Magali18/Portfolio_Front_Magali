@@ -1,15 +1,13 @@
 import { useSelector } from "react-redux";
 import "./Home.css";
-import { VscGithub, VscTwitter, VscCallIncoming } from "react-icons/vsc";
+import { VscGithub, VscTwitter } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { FaLinkedin,FaWhatsapp } from "react-icons/fa";
 
 import FotoPerfil from "../../image/Screenshot_10.png";
 
 const Home = () => {
-  const visitor = useSelector((state) => state.visitor.name);
-  const count = useSelector((state) => state.visitor.count);
-  
+    
   return (
     <div className='imageContain'>
       

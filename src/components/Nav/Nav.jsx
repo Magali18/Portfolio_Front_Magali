@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import {useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
+import styled from "styled-components";
+
 import {
   Container,
   LogoContainer,
@@ -10,6 +12,7 @@ import {
   MenuItemLink,
   MobileIcon,
 } from "./Navbar.elements";
+
 import {
   FaBattleNet,
   FaBars,
@@ -19,12 +22,39 @@ import {
   FaBriefcase,
   FaGlasses,
 } from "react-icons/fa";
+
 import { IconContext } from "react-icons";
+
+
+const routeStyles = {
+  "/":{ backgroundColor: "#fa12c8" },
+  "/abaut": {backgroundColor:"#ed4b9771" },
+  "/portfolio": {backgroundColor:"#c281f0" },
+  "/contact": {backgroundColor:"#7afffff6" },
+  
+};
+
+const routeColor = {
+  "/":{ color: "#fa12c8" },
+  "/abaut": {color:"#ed4b9771" },
+  "/portfolio": {color:"#c281f0" },
+  "/contact": {color:"#5c2abaf6"},
+  
+};
+
+
 
 const Navbar = () => {
   const navigate = useNavigate()
+  const myLocation = useLocation().pathname;
+  
 
-  const handleLanding = () => {
+  const routeStyle = routeStyles[myLocation] || {}; // Obtén el estilo para la ruta actual
+  const routeColor = routeColor[myLocation] || {}; // Obtén el estilo para la ruta actual
+
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+ const handleLanding = () => {
     navigate('/abaut');
   };
   
@@ -39,12 +69,11 @@ const Navbar = () => {
     navigate('/contact');
   };
 
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   return (
-    <Container>
+    <Container style={routeStyle}>
       <Wrapper>
-        <IconContext.Provider value={{ style: { fontSize: "2em" } }}>
+        <IconContext.Provider value={{ style: { fontSize: "2em"}}}>
           <LogoContainer>
             <p></p>
           </LogoContainer>
@@ -87,7 +116,7 @@ const Navbar = () => {
               </MenuItemLink>
             </MenuItem>
             <MenuItem onClick={handleContact}>
-              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+              <MenuItemLink style={routeColor} onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaGlasses />
                   CONTACT ME
@@ -98,7 +127,7 @@ const Navbar = () => {
         </IconContext.Provider>
       </Wrapper>
     </Container>
-  );
+      );
 };
 
 export default Navbar;

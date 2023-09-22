@@ -10,30 +10,26 @@ import emailjs from "@emailjs/browser";
 import React, { useEffect, useRef } from "react";
 
 const App = () => {
- {/* const form = useRef();
+const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_fwmu3vq",
-        "template_dqufk4h",
-        form.current,
-        "A-0VQcem-nMbwDjM6"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
-  useEffect(sendEmail, []);
-*/}
+
+const sendEmail = () => {
+
+  emailjs.sendForm( "service_fwmu3vq","template_dqufk4h",form.current,"A-0VQcem-nMbwDjM6")
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+};
+ useEffect(()=>{
+  sendEmail()
+},[])
+
+
   return (
     <div>
+       <form ref={form} type='submit'/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}>

@@ -1,17 +1,24 @@
 import "./Contact.css";
-import { BsFillSendCheckFill } from "react-icons/bs";
+import { BsFillSendCheckFill,BsEnvelopeCheck } from "react-icons/bs";
 import {useState,useRef} from 'react'
-import emailjs from "@emailjs/browser";
-import Modal from "../../components/Modal/Modal";
+import emailjs from "@emailjs/browser"; 
+
 
 
 const Contact = () => {
   const form = useRef();
+
   const [formContact, setFormContact] = useState({
     user_name: "",
     user_email: "",
     message: "",
   });
+  const [error , setError] = useState({
+    errorMessage: '',
+    mensajeEnviado:''
+  }
+   
+  )
   
   const handleChange = (e) => {
     setFormContact({ ...formContact,
@@ -29,14 +36,19 @@ const Contact = () => {
   
     e.preventDefault();
 if(formContact.user_name && formContact.user_email && formContact.message){
+
   emailjs.sendForm(
   "service_fwmu3vq",
   "template_qd5cd0z",
   form.current,
   "A-0VQcem-nMbwDjM6"
 );
-handleReset()}else {
-  console.log('no se puede enviar el mensaje')
+handleReset()
+setError({mensajeEnviado:`Gracias por contactarte conmigo, tendras mi respuesta muy pronto`})
+}else {
+ setError({
+  errorMessage:'No se pueden enviar campos vacios, completalos y volve a intentar'
+ })
 
 }
    
@@ -45,7 +57,7 @@ handleReset()}else {
 
   return (
     <div className="containerBody">
-      <Modal></Modal>
+
       <div className="containerForm3">
         <p className="styleheader">
    
@@ -63,6 +75,9 @@ handleReset()}else {
           <input value={formContact.message} name="message" onChange={handleChange} placeholder="Escribi tu mensaje" />
           </label>
           <button>Enviar</button>
+          <span className='colorSpan'> {error.errorMessage} </span> 
+          <span className="colorMensajeEnviado">{error.mensajeEnviado} </span>
+      
         </form>
         
         <p className="Stylep">Este mensaje será enviado a mi direccion de correo electronico.</p>

@@ -11,3 +11,6 @@
 .styleEducacion h1{
     text-decoration: underline;
 }
+.containCards{
+    display: flex;
+}

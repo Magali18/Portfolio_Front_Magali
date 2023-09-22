@@ -33,7 +33,7 @@ const routeStyles = {
 
 const routeColor = {
   "/":{ color: "#faf8fdf6" },
-  "/abaut": {color:"#ed4b9771" },
+  "/abaut": {color:"#faf8fdf6" },
   "/portfolio": {color:"#593cfbf6" },
   "/contact": {color:"#6d3b7df6"},
   

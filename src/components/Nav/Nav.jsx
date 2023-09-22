@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import {useLocation, useNavigate} from "react-router-dom";
-import styled from "styled-components";
 
 import {
   Container,
   LogoContainer,
   Wrapper,
-  Wrapper1,
   Menu,
   MenuItem,
   MenuItemLink,
@@ -14,7 +12,6 @@ import {
 } from "./Navbar.elements";
 
 import {
-  FaBattleNet,
   FaBars,
   FaTimes,
   FaHome,

@@ -1,10 +1,5 @@
-import styled, { createGlobalStyle } from "styled-components";
 
 
-
-const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
-`;
 export const Container = styled.div`
 
 backdrop-filter: blur(10px);

@@ -1,5 +1,5 @@
 import "./Contact.css";
-import { BsFillSendCheckFill,BsEnvelopeCheck } from "react-icons/bs";
+import { BsFillSendCheckFill } from "react-icons/bs";
 import {useState,useRef} from 'react'
 import emailjs from "@emailjs/browser"; 
 

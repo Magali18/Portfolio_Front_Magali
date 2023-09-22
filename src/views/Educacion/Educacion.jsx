@@ -12,8 +12,9 @@ const Educacion =()=>{
             </div>
         
          <Pdf/>
+         <div className='containCards'>
          <Cards></Cards>
-
+         </div>
         </div>
     )
 };

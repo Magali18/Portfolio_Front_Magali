@@ -5,42 +5,38 @@ import Contact from "./views/Contact/Contact";
 import Educacion from "./views/Educacion/Educacion";
 import Navbar from "./components/Nav/Nav";
 import { Route, Routes } from "react-router-dom";
-import emailjs from "@emailjs/browser";
+import Spinner from "./components/Spinner/Spinner";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect,useState } from "react";
 
 const App = () => {
-const form = useRef();
+  const [cargando, setCargando] = useState(true);
 
 
-const sendEmail = () => {
+  useEffect(() => {
 
-  emailjs.sendForm( "service_fwmu3vq","template_dqufk4h",form.current,"A-0VQcem-nMbwDjM6")
-    .then((result) => {
-        console.log(result.text);
-    }, (error) => {
-        console.log(error.text);
-    });
-};
- useEffect(()=>{
-  sendEmail()
-},[])
-
+    setTimeout(() => {
+      setCargando(false);
+    },6000);
+   
+  }, []);
 
   return (
     <div>
-       <form ref={form} type='submit'/>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />}>
-        </Route>
-        <Route path="/abaut" element={<Landing />}>
-        </Route>
-        <Route path="/portfolio" element={<Educacion />}>
-        </Route>
-        <Route path="/contact" element={<Contact />}>
-        </Route>
-      </Routes>
+      {cargando ? (
+        <Spinner/>
+  ) : (
+        <div>
+        
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/abaut" element={<Landing />}></Route>
+            <Route path="/portfolio" element={<Educacion />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
+          </Routes>
+        </div>
+      )}
     </div>
   );
 };

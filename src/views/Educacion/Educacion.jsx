@@ -5,7 +5,12 @@ import './Educacion.css'
 const Educacion =()=>{
     return(
         <div className='styleEducacion'>
-         <h1>Mis Proyectos</h1>
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
+         <h1 >Mis Proyectos</h1>
+
+            </div>
+        
          <Pdf/>
          <Cards></Cards>
 

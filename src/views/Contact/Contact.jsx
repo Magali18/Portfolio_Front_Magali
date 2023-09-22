@@ -38,10 +38,10 @@ const Contact = () => {
 if(formContact.user_name && formContact.user_email && formContact.message){
 
   emailjs.sendForm(
-  "service_fwmu3vq",
-  "template_qd5cd0z",
+    "service_dpv31ic",
+    "template_kamzfmu",
   form.current,
-  "A-0VQcem-nMbwDjM6"
+  "Cqv9CHmzuJQAY8x_G"
 );
 handleReset()
 setError({mensajeEnviado:`Gracias por contactarte conmigo, tendras mi respuesta muy pronto`})

@@ -2,9 +2,8 @@
  @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
  .imageContain{
   background: url('../../image/4182488908c0aa4f6ebf107e790f2b63.jpg');
-  background-size:auto;
-  width: 100%;
-
+  background-size:contain;
+  height: 880px;
 z-index: 0; /* Añade un z-index aquí */
  }
     .Home{
@@ -95,6 +94,6 @@ z-index: 0; /* Añade un z-index aquí */
   transform: scale(1.1);
 }
 .colorprueba1{
-  color:#00c8f5fe
+  color:#6d3b7df6
 }
    

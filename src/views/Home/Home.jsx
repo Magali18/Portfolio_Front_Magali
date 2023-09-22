@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux";
 import "./Home.css";
 import { VscGithub, VscTwitter } from "react-icons/vsc";
 import { Link } from "react-router-dom";

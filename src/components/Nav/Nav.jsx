@@ -27,7 +27,7 @@ const routeStyles = {
   "/":{ backgroundColor: "#fa12c8" },
   "/abaut": {backgroundColor:"#ed4b9771" },
   "/portfolio": {backgroundColor:"#c281f0" },
-  "/contact": {backgroundColor:"#7afffff6" },
+  "/contact": {backgroundColor:"#57adadf6" },
   
 };
 
@@ -35,7 +35,7 @@ const routeColor = {
   "/":{ color: "#faf8fdf6" },
   "/abaut": {color:"#ed4b9771" },
   "/portfolio": {color:"#593cfbf6" },
-  "/contact": {color:"#00c8f5fe"},
+  "/contact": {color:"#6d3b7df6"},
   
 };
 

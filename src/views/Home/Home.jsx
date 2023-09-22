@@ -28,7 +28,7 @@ const Home = () => {
       );
   };
   useEffect(() => {
-   // sendEmail();
+   sendEmail();
    
   }, []);
   return (

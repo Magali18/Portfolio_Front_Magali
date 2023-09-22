@@ -35,10 +35,10 @@ const routeStyles = {
 };
 
 const routeColor = {
-  "/":{ color: "#fa12c8" },
+  "/":{ color: "#faf8fdf6" },
   "/abaut": {color:"#ed4b9771" },
-  "/portfolio": {color:"#c281f0" },
-  "/contact": {color:"#5c2abaf6"},
+  "/portfolio": {color:"#593cfbf6" },
+  "/contact": {color:"#00c8f5fe"},
   
 };
 
@@ -50,7 +50,7 @@ const Navbar = () => {
   
 
   const routeStyle = routeStyles[myLocation] || {}; // Obtén el estilo para la ruta actual
-  const routeColor = routeColor[myLocation] || {}; // Obtén el estilo para la ruta actual
+  const routeColors = routeColor[myLocation] || {}; // Obtén el estilo para la ruta actual
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
@@ -85,7 +85,7 @@ const Navbar = () => {
           <Menu open={showMobileMenu}>
           
               <MenuItem onClick={handleAbaut}>
-                <MenuItemLink
+                <MenuItemLink style={routeColors}
                   onClick={() => setShowMobileMenu(!showMobileMenu)}
                 >
                   <div>
@@ -97,7 +97,7 @@ const Navbar = () => {
             
        
               <MenuItem onClick={ handleLanding}>
-                <MenuItemLink
+                <MenuItemLink  style={routeColors}
                   onClick={() => setShowMobileMenu(!showMobileMenu)}
                 >
                   <div>
@@ -108,7 +108,7 @@ const Navbar = () => {
               </MenuItem>
            
             <MenuItem onClick={handlePortfolio}> 
-              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+              <MenuItemLink style={routeColors} onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaBriefcase />
                   PORTFOLIO
@@ -116,7 +116,7 @@ const Navbar = () => {
               </MenuItemLink>
             </MenuItem>
             <MenuItem onClick={handleContact}>
-              <MenuItemLink style={routeColor} onClick={() => setShowMobileMenu(!showMobileMenu)}>
+              <MenuItemLink style={routeColors} onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaGlasses />
                   CONTACT ME

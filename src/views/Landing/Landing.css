@@ -61,5 +61,13 @@ height: 880px;
   .coloPrueba{
     color:#427388;
   }
-   
+   .containerForm p{
+    font-family: 'pacifico';
+    color: aliceblue;
+    font-size: 40px;
+  padding: 5%;
+  font-weight: 0;;
+  background-color: rgba(3, 3, 3, 0.243);
+  backdrop-filter: blur(2px) saturate(177%);
+   }
 

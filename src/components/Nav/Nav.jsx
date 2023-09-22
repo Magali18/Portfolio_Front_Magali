@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import {useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
+import styled from "styled-components";
+
 import {
   Container,
   LogoContainer,
@@ -10,6 +12,7 @@ import {
   MenuItemLink,
   MobileIcon,
 } from "./Navbar.elements";
+
 import {
   FaBattleNet,
   FaBars,
@@ -19,32 +22,58 @@ import {
   FaBriefcase,
   FaGlasses,
 } from "react-icons/fa";
+
 import { IconContext } from "react-icons";
+
+
+const routeStyles = {
+  "/":{ backgroundColor: "#fa12c8" },
+  "/abaut": {backgroundColor:"#ed4b9771" },
+  "/portfolio": {backgroundColor:"#c281f0" },
+  "/contact": {backgroundColor:"#7afffff6" },
+  
+};
+
+const routeColor = {
+  "/":{ color: "#faf8fdf6" },
+  "/abaut": {color:"#ed4b9771" },
+  "/portfolio": {color:"#593cfbf6" },
+  "/contact": {color:"#00c8f5fe"},
+  
+};
+
+
 
 const Navbar = () => {
   const navigate = useNavigate()
+  const myLocation = useLocation().pathname;
+  
 
-  const handleLanding = () => {
-    navigate('/');
+  const routeStyle = routeStyles[myLocation] || {}; // Obtén el estilo para la ruta actual
+  const routeColors = routeColor[myLocation] || {}; // Obtén el estilo para la ruta actual
+
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+ const handleLanding = () => {
+    navigate('/abaut');
   };
   
   const handleAbaut = () => {
-    navigate('/abaut');
+    navigate('/');
   };
   
   const handlePortfolio = () => {
     navigate('/portfolio');
   };
     const handleContact = () => {
-    navigate('/lolo');
+    navigate('/contact');
   };
 
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   return (
-    <Container>
+    <Container style={routeStyle}>
       <Wrapper>
-        <IconContext.Provider value={{ style: { fontSize: "2em" } }}>
+        <IconContext.Provider value={{ style: { fontSize: "2em"}}}>
           <LogoContainer>
             <p></p>
           </LogoContainer>
@@ -55,8 +84,8 @@ const Navbar = () => {
 
           <Menu open={showMobileMenu}>
           
-              <MenuItem onClick={handleLanding}>
-                <MenuItemLink
+              <MenuItem onClick={handleAbaut}>
+                <MenuItemLink style={routeColors}
                   onClick={() => setShowMobileMenu(!showMobileMenu)}
                 >
                   <div>
@@ -67,8 +96,8 @@ const Navbar = () => {
               </MenuItem>
             
        
-              <MenuItem onClick={handleAbaut}>
-                <MenuItemLink
+              <MenuItem onClick={ handleLanding}>
+                <MenuItemLink  style={routeColors}
                   onClick={() => setShowMobileMenu(!showMobileMenu)}
                 >
                   <div>
@@ -79,7 +108,7 @@ const Navbar = () => {
               </MenuItem>
            
             <MenuItem onClick={handlePortfolio}> 
-              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+              <MenuItemLink style={routeColors} onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaBriefcase />
                   PORTFOLIO
@@ -87,7 +116,7 @@ const Navbar = () => {
               </MenuItemLink>
             </MenuItem>
             <MenuItem onClick={handleContact}>
-              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+              <MenuItemLink style={routeColors} onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaGlasses />
                   CONTACT ME
@@ -98,7 +127,7 @@ const Navbar = () => {
         </IconContext.Provider>
       </Wrapper>
     </Container>
-  );
+      );
 };
 
 export default Navbar;

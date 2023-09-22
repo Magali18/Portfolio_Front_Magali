@@ -13,6 +13,9 @@
     width: 400px; /* Ancho de la tarjeta */
       height: 200px; 
   }
+  .card-single img:hover{
+    box-shadow: 0 0 30px 70px #ba8be03b; /* Propiedad box-shadow para el efecto de resplandor */
+  }
    .card-single h1 {
     font-size: 40px;
 

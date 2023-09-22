@@ -1,8 +1,17 @@
 
  @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+ .imageContain{
+  background: url('../../image/4182488908c0aa4f6ebf107e790f2b63.jpg');
+  background-size:auto;
+  width: 100%;
+
+z-index: 0; /* Añade un z-index aquí */
+ }
     .Home{
     margin-left: 40%;
     font-family: 'pacifico';
+   
+
     }
      .container img{
       border-radius: 100%;
@@ -13,9 +22,10 @@
       margin-top: 70px;
       margin-left: -30px;
      }
-     img:hover{
+     .container img:hover{
       
       cursor: pointer;
+      box-shadow: 0 0 30px 70px #f11a9f22; /* Propiedad box-shadow para el efecto de resplandor */
      }
    
 
@@ -59,6 +69,7 @@
           width: 200px;
           margin-left: -30%;
           border: 3px solid #ea137b;
+       
         }
         .container h3{
           font-size: 35px;
@@ -82,5 +93,8 @@
   margin: 0; /* Elimina el margen predeterminado de los h3 */
   padding: 10px; /* Añade espacio alrededor de los h3 si lo deseas */
   transform: scale(1.1);
+}
+.colorprueba1{
+  color:#00c8f5fe
 }
    

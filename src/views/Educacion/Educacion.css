@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
 .styleEducacion{
     font-family:'pacifico','lobster';
     color:deeppink;
     text-align: center;
+    background: url('../../image/ff42ab0d997e849c48cff0014c77c951.jpg');
+    height: 880px;
+    z-index: 0;
 }
 .styleEducacion h1{
     text-decoration: underline;

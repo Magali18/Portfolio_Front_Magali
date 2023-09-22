@@ -10,8 +10,7 @@ export const Container = styled.div`
 backdrop-filter: blur(10px);
   width: 100%;
   height: 70px;
-  background-color: #f01db5ca; ;
-
+ 
 `;
 
 
@@ -87,7 +86,6 @@ text-decoration: none;
   align-items: center;
   height: 100%;
   padding: 0.5rem 2.5rem;
-  color: #fff;
   font-family: sans-serif;
   font-size: 1rem;
   font-weight: 300;

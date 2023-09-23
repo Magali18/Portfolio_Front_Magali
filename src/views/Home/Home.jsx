@@ -1,31 +1,51 @@
-import { useSelector } from "react-redux";
 import "./Home.css";
-import IconTecnologi from "../../components/IconTech/icon";
-import goBack from "../../utils/goBack";
+import { VscGithub, VscTwitter } from "react-icons/vsc";
+import { Link } from "react-router-dom";
+import { FaLinkedin,FaWhatsapp } from "react-icons/fa";
 
-import FotoPerfil from '../../image/Screenshot_10.png'
 
+import FotoPerfil from "../../image/Screenshot_10.png";
 
 const Home = () => {
-  const visitor = useSelector((state) => state.visitor.name);
-  const count = useSelector((state)=> state.visitor.count)
-
+  
   return (
-    <div>
-      <button onClick={goBack}> Atras</button>
-      <h2>Bienvenido : {visitor ? visitor :` Usuario N° ${count}`}</h2>
-    <div className="Home">
-      <div className="component1" > 
-      <img src={FotoPerfil} alt="" />
-      <h3 >Magali Pereyra </h3>
-
-      </div>
-      <div  className="component2"> 
+    <div className='imageContain'>
      
-      <IconTecnologi/>
-      
+      <div className="Home">
+        <div className="container">
+          <div className="imgHover" >
+            <img src={FotoPerfil} alt="ImagenPerfil" />
+          </div>
+          <div data-aos="fade-up"
+     data-aos-duration="3000">
+          <h3>Magali Pereyra</h3>
+          </div>
+          <h4>
+          
+            ¡No dudes en contactar conmigo y descubrir todo lo que tengo para
+            ofrecer!
+          </h4>
+
+          <div className="containerStyleIcon">
+            <Link to="https://github.com/Magali18">
+              <h3>
+                <VscGithub />
+              </h3>
+            </Link>
+            <Link to='https://twitter.com/pereyrahmagali'> 
+            <h3>
+              <VscTwitter />
+            </h3>
+            </Link>
+            <Link to='https://www.linkedin.com/in/magali-pereyra-322682239/'>
+            <h3>
+              <FaLinkedin />
+            </h3>
+            </Link>
+            <h3> <FaWhatsapp/></h3>
+          </div>
+        </div>
       </div>
-    </div>
     </div>
   );
 };

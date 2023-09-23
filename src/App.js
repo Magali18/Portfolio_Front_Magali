@@ -9,31 +9,35 @@ import Spinner from "./components/Spinner/Spinner";
 
 import React, { useEffect,useState } from "react";
 
-const App = () => (
-  <ReactFullpage
-    anchors={anchors}
-    navigation
-    navigationTooltips={anchors}
-    navigat
-    sectionsColor={["#ee4ca2bd","#ee4ca240","#ee4ca2bd","#39ab87" ]}
+const App = () => {
+  const [cargando, setCargando] = useState(true);
 
-    onLeave={(origin, destination, direction) => {
-      console.log("onLeave event", { origin, destination, direction });
-    }}
-    render={({ state, fullpageApi }) => {
-      console.log("render prop change", state, fullpageApi);
 
-      return (
-        <div>
-          <div className="section"><h3> <Landing/></h3></div>
-          <div className="section"><h3><Home/></h3></div>
-          <div className="section"><h3><Proyectos/></h3></div>
+  useEffect(() => {
+
+    setTimeout(() => {
+      setCargando(false);
+    },6000);
    
+  }, []);
 
-     
+  return (
+    <div>
+      {cargando ? (
+        <Spinner/>
+  ) : (
+        <div>
+        
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/abaut" element={<Landing />}></Route>
+            <Route path="/portfolio" element={<Educacion />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
+          </Routes>
         </div>
-      );
-    }}
-  />
-);
+      )}
+    </div>
+  );
+};
 export default App;

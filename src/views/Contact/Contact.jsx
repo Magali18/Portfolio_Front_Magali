@@ -39,8 +39,8 @@ if(formContact.user_name && formContact.user_email && formContact.message){
 
   emailjs.sendForm(
     "service_dpv31ic",
-    "template_kamzfmu",
-  form.current,
+    "template_34i7h4z",
+      form.current,
   "Cqv9CHmzuJQAY8x_G"
 );
 handleReset()

@@ -3,12 +3,12 @@ import { VscGithub, VscTwitter } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { FaLinkedin,FaWhatsapp } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
-import React, { useEffect, useRef } from "react";
+//import React, { useEffect, useRef } from "react";
 
 import FotoPerfil from "../../image/Screenshot_10.png";
 
 const Home = () => {
-  const form = useRef();
+  {/*const form = useRef();
   
   const sendEmail = () => {
     emailjs
@@ -30,10 +30,10 @@ const Home = () => {
   useEffect(() => {
    sendEmail();
    
-  }, []);
+  }, []);*/}
   return (
     <div className='imageContain'>
-        <form ref={form} type="submit" />
+      {/*  <form ref={form} type="submit" />*/}
       <div className="Home">
         <div className="container">
           <div className="imgHover" >

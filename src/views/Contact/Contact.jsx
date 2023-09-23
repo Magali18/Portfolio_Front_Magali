@@ -61,7 +61,7 @@ setError({mensajeEnviado:`Gracias por contactarte conmigo, tendras mi respuesta 
       <div className="containerForm3">
         <p className="styleheader">
    
-          Contacta conmigo. <BsFillSendCheckFill className="colorIcono" />
+          ¡Contacta conmigo!. <BsFillSendCheckFill className="colorIcono" />
         </p>
         <form ref={form} onSubmit={handleSubmit} className="contact" type="submit">
           

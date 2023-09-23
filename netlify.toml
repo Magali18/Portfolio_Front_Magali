@@ -1,8 +1,4 @@
-[build]
-command = "npm run build"
-publish = "dist"  
-command = "npm run build"
-  functions = "lambda"
-  publish = "build"
-  # Configura el entorno para que CI sea false
-  environment = { CI = "false" }
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

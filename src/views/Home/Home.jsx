@@ -2,7 +2,7 @@ import "./Home.css";
 import { VscGithub, VscTwitter } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { FaLinkedin,FaWhatsapp } from "react-icons/fa";
-import emailjs from "@emailjs/browser";
+//import emailjs from "@emailjs/browser";
 //import React, { useEffect, useRef } from "react";
 
 import FotoPerfil from "../../image/Screenshot_10.png";

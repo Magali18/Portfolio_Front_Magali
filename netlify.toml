@@ -1,7 +1,6 @@
 [build]
 command = "npm run build"
 publish = "dist"  
-command = "npm run build"
   functions = "lambda"
   publish = "build"
   # Configura el entorno para que CI sea false

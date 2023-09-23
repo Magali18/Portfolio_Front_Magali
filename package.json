@@ -29,11 +29,11 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  
   "main": "src/index.js",
   "directories": {
     "output": "dist"

@@ -1,15 +1,13 @@
 .cards-container{
     
-    width: 50vw;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
-    gap: 300px;
-
-    margin-left: 25%;
-
+    width: 20%;
+    display: flex;
+    top: 10%;
+    margin-left:35%;
+    gap: 60px;
 }
-
-/* @media screen and (max-width: 900px){
+/*
+ @media screen and (max-width: 900px){
     .cards-container{
          display:inline-block;
          margin-left: -45%

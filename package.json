@@ -5,8 +5,10 @@
   "dependencies": {
     "@emailjs/browser": "3.11.0",
     "@fullpage/react-fullpage": "^0.1.40",
+    "@material-tailwind/react": "^2.1.2",
     "@react-pdf/renderer": "3.1.12",
     "@reduxjs/toolkit": "1.9.5",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@testing-library/jest-dom": "6.1.2",
     "@testing-library/react": "13.4.0",
     "@testing-library/user-event": "13.5.0",
@@ -29,11 +31,11 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  
   "main": "src/index.js",
   "directories": {
     "output": "dist"
@@ -58,6 +60,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "tailwindcss": "^3.3.3",
     "webpack-cli": "^5.1.4"
   }
 }

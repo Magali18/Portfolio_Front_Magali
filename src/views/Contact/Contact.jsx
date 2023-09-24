@@ -25,7 +25,8 @@ const Contact = () => {
       [e.target.name]: e.target.value
      });
   };
-  const handleReset = () => {
+  const handleReset = (e) => {
+    e.preventDefault()
     setFormContact({
       user_name: "",
       user_email: "",

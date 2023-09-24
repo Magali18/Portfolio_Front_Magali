@@ -25,8 +25,8 @@ const Contact = () => {
       [e.target.name]: e.target.value
      });
   };
-  const handleReset = (e) => {
-    e.preventDefault()
+  const handleReset = () => {
+
     setFormContact({
       user_name: "",
       user_email: "",
@@ -65,12 +65,13 @@ setError({mensajeEnviado:`Gracias por contactarte conmigo, tendras mi respuesta 
           ¡Contacta conmigo!. <BsFillSendCheckFill className="colorIcono" />
         </p>
         <form ref={form} onSubmit={handleSubmit} className="contact" type="submit">
-          
+ 
           <label>Nombre
           <input value={formContact.name} name="user_name" onChange={handleChange} placeholder="Escribi tu nombre" type="text" />
           </label>
-          <label>Email
-          <input  value={formContact.email} name="user_email" onChange={handleChange} placeholder="Escribi tu email" type="text" />
+          
+          <label>Email     
+          <input value={formContact.email} name="user_email" onChange={handleChange} placeholder="Escribi tu email" type="text" />
           </label>
           <label>Mensaje
           <input value={formContact.message} name="message" onChange={handleChange} placeholder="Escribi tu mensaje" />

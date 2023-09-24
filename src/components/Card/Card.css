@@ -2,11 +2,11 @@
  background-color: rgba(152, 211, 231, 0.289);
  justify-content: center;
 grid-template-columns: repeat(2, 1fr);
-      display:grid;
+display:grid;
 grid-row-gap:10rem ;  
-   height: 100%; /* Alto de la tarjeta */
 justify-items: center;
 padding:1rem;
+margin: 1rem;
 align-items: center;
   }
   .card-single img {

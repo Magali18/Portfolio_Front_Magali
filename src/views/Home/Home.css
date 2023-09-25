@@ -13,6 +13,7 @@ z-index: 0; /* Añade un z-index aquí */
 
     }
      .container img{
+      margin-top:auto;
       border-radius: 100%;
       width: 350px;
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), -3px -3px 5px rgba(245, 157, 210, 0.5);

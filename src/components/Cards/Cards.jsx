@@ -1,5 +1,5 @@
 
-import Card1 from "../Card/Card"
+import Card from "../Card/Card"
 import './Crads.css'
 import info from '../Proyectos/info.js'
 const Cards = () => {
@@ -7,7 +7,7 @@ const Cards = () => {
   
       <div className="cards-container">
        {info.map((infoItem, index) => (
-        <Card1 key={index} info={infoItem} />
+        <Card key={index} info={infoItem} />
       )) } 
      
    

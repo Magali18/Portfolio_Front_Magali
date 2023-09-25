@@ -1,9 +1,9 @@
 .card-single{
- background-color: rgba(152, 211, 231, 0.289);
+ background-color: rgba(40, 6, 78, 0.289);
  justify-content: center;
   grid-template-columns: repeat(2, 1fr);
  display:grid;
-grid-row-gap:10rem ;  
+grid-row-gap:1rem ;  
 justify-items: center;
 padding:1rem;
 margin: 1rem;

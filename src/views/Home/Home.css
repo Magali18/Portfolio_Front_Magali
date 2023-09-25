@@ -9,11 +9,12 @@ z-index: 0; /* Añade un z-index aquí */
     .Home{
     margin-left: 40%;
     font-family: 'pacifico';
+    align-items: center;
    
 
     }
      .container img{
-      margin-top:auto;
+    margin-top: 10%;
       border-radius: 100%;
       width: 350px;
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), -3px -3px 5px rgba(245, 157, 210, 0.5);

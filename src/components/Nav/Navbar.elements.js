@@ -5,6 +5,7 @@ export const Container = styled.div`
 backdrop-filter: blur(10px);
   width: 100%;
   height: 70px;
+  background-color:#fa12c8;
  
 `;
 
@@ -75,6 +76,7 @@ export const MenuItem = styled.li`
 `;
 
 export const MenuItemLink = styled.a`
+color:#fff;
 text-decoration: none;
   display: flex;
   justify-content: center;

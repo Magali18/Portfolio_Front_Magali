@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import {useLocation, useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
+import styled from "styled-components";
+
 
 import {
   Container,
@@ -23,31 +25,13 @@ import {
 import { IconContext } from "react-icons";
 
 
-const routeStyles = {
-  "/":{ backgroundColor: "#fa12c8" },
-  "/abaut": {backgroundColor:"#ed4b9771" },
-  "/portfolio": {backgroundColor:"#c281f0" },
-  "/contact": {backgroundColor:"#57adadf6" },
-  
-};
-
-const routeColor = {
-  "/":{ color: "#faf8fdf6" },
-  "/abaut": {color:"#faf8fdf6" },
-  "/portfolio": {color:"#593cfbf6" },
-  "/contact": {color:"#faf8fdf6"},
-  
-};
-
 
 
 const Navbar = () => {
   const navigate = useNavigate()
-  const myLocation = useLocation().pathname;
   
 
-  const routeStyle = routeStyles[myLocation] || {}; // Obtén el estilo para la ruta actual
-  const routeColors = routeColor[myLocation] || {}; // Obtén el estilo para la ruta actual
+ 
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
@@ -68,7 +52,7 @@ const Navbar = () => {
 
 
   return (
-    <Container style={routeStyle}>
+    <Container value={{style: {backgoround:"#fa12c8"}}}>
       <Wrapper>
         <IconContext.Provider value={{ style: { fontSize: "2em"}}}>
           <LogoContainer>
@@ -82,7 +66,7 @@ const Navbar = () => {
           <Menu open={showMobileMenu}>
           
               <MenuItem onClick={handleAbaut}>
-                <MenuItemLink style={routeColors}
+                <MenuItemLink
                   onClick={() => setShowMobileMenu(!showMobileMenu)}
                 >
                   <div>
@@ -94,7 +78,7 @@ const Navbar = () => {
             
        
               <MenuItem onClick={ handleLanding}>
-                <MenuItemLink  style={routeColors}
+                <MenuItemLink
                   onClick={() => setShowMobileMenu(!showMobileMenu)}
                 >
                   <div>
@@ -105,7 +89,7 @@ const Navbar = () => {
               </MenuItem>
            
             <MenuItem onClick={handlePortfolio}> 
-              <MenuItemLink style={routeColors} onClick={() => setShowMobileMenu(!showMobileMenu)}>
+              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaBriefcase />
                   PORTFOLIO
@@ -113,7 +97,7 @@ const Navbar = () => {
               </MenuItemLink>
             </MenuItem>
             <MenuItem onClick={handleContact}>
-              <MenuItemLink style={routeColors} onClick={() => setShowMobileMenu(!showMobileMenu)}>
+              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaGlasses />
                   CONTACT ME

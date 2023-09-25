@@ -5,7 +5,6 @@
  display:flex;
 grid-row-gap:1rem ;  
 justify-items: center;
-
 margin: 1rem;
 align-items: center;
   }
@@ -24,6 +23,7 @@ cursor:pointer;
  .iconTech{
   color: rgb(167, 21, 131);
   font-size: 50px;
+  display: flex;
  }
  .bodyCard button{
   font-family: Arial, Helvetica, sans-serif;

@@ -9,7 +9,7 @@ const Landing = () => {
        <div className='container2'> 
        <h2> Full Stack web Developer Junior</h2>
        <p>My Skills:</p>
-<p><IconTecnologi/> </p>
+<IconTecnologi/> 
        
       </div>
       </div>

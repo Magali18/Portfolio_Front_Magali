@@ -10,8 +10,9 @@ margin: 1rem;
 align-items: center;
   }
   .card-single img {
-    width: 20px; /* Ancho de la tarjeta */
-    height: 10px; 
+    width: 150px; /* Ancho de la tarjeta */
+    height: 150px; 
+cursor:pointer;
   }
   .card-single img:hover{
     box-shadow: 0 0 30px 70px #ba8be03b; /* Propiedad box-shadow para el efecto de resplandor */

@@ -2,23 +2,22 @@
 
  @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 .containerForm{
-background: url('../../image/bccffda601e3d3950001a6177b0273ca.jpg');
+background: url('../../image/4182488908c0aa4f6ebf107e790f2b63.jpg');
 background-size:contain;
 z-index: 0;
 height: 880px;
 
 
 }.container2{
-  backdrop-filter: blur(2px) saturate(177%);
-  -webkit-backdrop-filter: blur(2px) saturate(177%);
-  background-color: rgba(17, 25, 40, 0.04);
-  border-radius: 12px;
+ 
+ 
   border: 1px solid rgba(255, 255, 255, 0.125);
   z-index: 0;
   height: 880px;
 } 
 .container2 h2{
-  color: aliceblue;
+  margin-top: 10%;
+  color: #fc1786;
   font-family: 'pacifico';
   font-size: 40px;
   margin-left: 35%;

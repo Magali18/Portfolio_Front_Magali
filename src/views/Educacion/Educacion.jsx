@@ -8,6 +8,7 @@ const Educacion =()=>{
             <div data-aos="fade-up"
      data-aos-anchor-placement="top-bottom">
          <h1 >Mis Proyectos</h1>
+         
 
             </div>
         

@@ -15,7 +15,7 @@ return (
   <Card className="flex justfiy-center w-full max-w-[26rem] shadow-lg hover:shadow-lg hover:shadow-gray-400 transition-all duration-300 ">
   <div className="flex flex-col justify-center">
     <CardHeader floated={false} color="blue-gray">
-      <img src={image} alt="job-image" className="w-96 h-64" />
+      <img src={image} alt="previue-proyect" className="w-96 h-64" />
       <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
     </CardHeader>
     <CardBody>

@@ -26,19 +26,19 @@ z-index: 0; /* Añade un z-index aquí */
      .container img:hover{
       
       cursor: pointer;
-      box-shadow: 0 0 30px 70px #f11a9f22; /* Propiedad box-shadow para el efecto de resplandor */
+      box-shadow: 0 0 30px 70px #f99ad522; /* Propiedad box-shadow para el efecto de resplandor */
      }
    
 
      
      .container h3{
 
-      margin-left: -6%;
+      margin-left: -5%;
       color:    #ea137b;  
   transition: color 0.3s ease;
   transition: font-size 0.3s ease;
   font-size: 60px;
-  margin-top: 7%;
+  margin-top: 5%;
      }
      .container h4{
     margin-left: -17%;

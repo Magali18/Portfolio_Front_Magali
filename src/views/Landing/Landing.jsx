@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Landing.css";
-
+import IconTecnologi from '../../components/IconTech/icon'
 const Landing = () => {
   return (
     <div>
@@ -9,7 +9,7 @@ const Landing = () => {
        <div className='container2'> 
        <h2> Full Stack web Developer Junior</h2>
        <p>My Skills:</p>
-
+<p><IconTecnologi/> </p>
        
       </div>
       </div>

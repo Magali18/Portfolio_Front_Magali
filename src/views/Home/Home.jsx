@@ -43,7 +43,7 @@ const Home = () => {
               <FaLinkedin />
             </h3>
             </Link>
-            <h3> <FaWhatsapp/></h3>
+     
           </div>
         </div>
       </div>

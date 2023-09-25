@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa";
 import Landing from "../Landing/Landing";
 import Educacion from "../Educacion/Educacion";
+import Contact from '../Contact/Contact'
 
 import FotoPerfil from "../../image/Screenshot_10.png";
 
@@ -52,6 +53,9 @@ const Home = () => {
       </section>
       <section>
       <Educacion />
+      </section>
+      <section>
+        <Contact/>
       </section>
     </div>
   );

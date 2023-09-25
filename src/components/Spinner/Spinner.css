@@ -1,8 +1,8 @@
 
 .containerSnnip{
-  background-color:rgba(241, 41, 241, 0.397);
-  background-size:contain;
-  height: 890px;
+  background-color:rgba(244, 99, 244, 0.316);
+  background-size:cover;
+  height: 900px;
   z-index: 0;
 }  
 .containerSnnip p{

@@ -6,6 +6,7 @@ backdrop-filter: blur(10px);
   width: 100%;
   height: 70px;
   background-color:#fa12c8;
+  position: fixed;
  
 `;
 
@@ -76,7 +77,8 @@ export const MenuItem = styled.li`
 `;
 
 export const MenuItemLink = styled.a`
-color:#fff;
+position
+color:#fa12c8;
 text-decoration: none;
   display: flex;
   justify-content: center;

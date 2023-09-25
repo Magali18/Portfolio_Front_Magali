@@ -3,8 +3,8 @@
 .containerBody{
 font-family:'pacifico';
     margin-top: 0%;
-    background: url('../../image/b05d5fea77aca8b662e6d626b6ac172a.jpg');
-    background-size:contain;
+    background: url('../../image/bccffda601e3d3950001a6177b0273ca.jpg');
+    background-size:auto;
 
 height: 880px;
 z-index: 0;
@@ -20,15 +20,12 @@ z-index: 0;
     margin-left: 25%;
    padding: 50px;
 
-
     width: 800px;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     top:37%;
-    left: 20%;
+    left: 18%;
     transform: translate(-30%, -30%);
-
-  
     border-radius: 15px;
     box-shadow: 7px 13px 37px rgba(0, 0, 0, .6);
     box-shadow: 7px 13px 37px rgba(0, 0, 0, .8);
@@ -42,7 +39,6 @@ z-index: 0;
  font-size: 40px;
   background: #43c8ed44;
   overflow: hidden;
-  position: relative;
 
   display: block;
   text-align: center;
@@ -71,6 +67,7 @@ z-index: 0;
   
 }
 .contact label{
+    font-size: 30px;
     color:aqua;
     display: block;
   width: 100%;
@@ -82,10 +79,12 @@ z-index: 0;
 }
 .contact input::placeholder{
 color: rgba(247, 249, 249, 0.808);
-font-family: Arial, Helvetica, sans-serif;
+font-family: 'pacifico';
+padding:35%;
 
 }
 .contact button{
+    
     margin-bottom: 10px;
 padding: 5px;
     width: 70px;
@@ -118,7 +117,7 @@ padding: 5px;
     color: rgba(0, 0, 0, 0.645);
 }
 .colorSpan{
-    color: #fc0e0e;
+    color: #ac0606;
     font-size: 19px;
     font-family: Arial, Helvetica, sans-serif;
 }

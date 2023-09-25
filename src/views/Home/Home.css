@@ -3,7 +3,7 @@
  .imageContain{
   background: url('../../image/4182488908c0aa4f6ebf107e790f2b63.jpg');
   background-size:contain;
-  height: 880px;
+  height: 900px;
 z-index: 0; /* Añade un z-index aquí */
  }
     .Home{
@@ -18,7 +18,7 @@ z-index: 0; /* Añade un z-index aquí */
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), -3px -3px 5px rgba(245, 157, 210, 0.5);
       transition: transform 0.5s ease;
       margin-bottom: 10px;
-      margin-top: 70px;
+      
       margin-left: -30px;
      }
      .container img:hover{

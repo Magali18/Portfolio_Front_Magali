@@ -1,7 +1,7 @@
 import "./Home.css";
 import { VscGithub, VscTwitter } from "react-icons/vsc";
 import { Link } from "react-router-dom";
-import { FaLinkedin,FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import Landing from "../Landing/Landing";
 import Educacion from "../Educacion/Educacion";
 

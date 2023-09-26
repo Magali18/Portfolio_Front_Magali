@@ -39,8 +39,19 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
     }
   });
  
+  const wppMessageRedux = createAsyncThunk("visitor/wppMessageRedux", async () => {
+    try {
+
+        const {data} = await axios.post(
+          'http://localhost:3001/postWpp'
+         );
+         return data;
+    
+    } catch (error) {
+      throw new Error(error);
+    }
+  });
 
 
-
-  export {postVisit, getVisit,postVisitNull};
+  export default {postVisit, getVisit,postVisitNull,wppMessageRedux};
    

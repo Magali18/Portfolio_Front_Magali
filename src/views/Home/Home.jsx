@@ -5,6 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 import Landing from "../Landing/Landing";
 import Educacion from "../Educacion/Educacion";
 import Contact from '../Contact/Contact'
+import WppMessage from "../../components/WppMessage/wppMesagge";
 
 import FotoPerfil from "../../image/Screenshot_10.png";
 
@@ -27,6 +28,7 @@ const Home = () => {
             ¡No dudes en contactar conmigo y descubrir todo lo que tengo para
             ofrecer!
           </h4>
+          <WppMessage/>
 
           <div className="containerStyleIcon">
             <Link to="https://github.com/Magali18">
@@ -48,13 +50,13 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <section>
+      <section id='Landing-section' >
       <Landing />
       </section>
-      <section>
+      <section id='Educacion-section'>
       <Educacion />
       </section>
-      <section>
+      <section id='Contact-section'>
         <Contact/>
       </section>
     </div>

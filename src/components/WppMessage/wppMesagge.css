@@ -1,0 +1,89 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.custom-accordion .accordion-button {
+  z-index: 1; /* Añade un z-index aquí */
+
+ 
+    background-color: rgb(30, 157, 72) !important;
+      color: white !important;
+    }
+/* Cambiar la dirección en la que se abre el acordeón */
+.custom-accordion .accordion-item {
+    flex-direction: column-reverse;
+    background-color: rgba(169, 212, 212, 0.369) !important;
+
+  }
+  
+  .custom-accordion .accordion-button {
+    border-radius: 0.25rem;
+    z-index: 1; /* Añade un z-index aquí */
+
+  }
+  
+  .custom-accordion .accordion-collapse {
+    flex-direction: column-reverse;
+    z-index: 1; /* Añade un z-index aquí */
+
+  }
+  
+  /* Cambiar la dirección de apertura cuando está abierto */
+  .custom-accordion .accordion-item.active {
+    flex-direction: column;
+    z-index: 1; /* Añade un z-index aquí */
+
+  }
+  
+  .custom-accordion .accordion-item {
+    width: 20%; /* Ajusta el valor del ancho según tus preferencias */
+    margin: 0 auto; /* Centrar el acordeón en la página (opcional) */
+    position: fixed;
+    bottom: 0%;
+    right: 3%;
+    z-index: 1; /* Añade un z-index aquí */
+
+  }
+  .inputWpp{
+    border:none;
+    padding: 2%;
+    border-radius: 3%;
+    width: 300px;
+    margin-right: 10px; 
+  }
+  .inputWpp::placeholder{
+    color: rgb(121, 125, 129);
+  }
+  .botonWpp{
+    border: none;
+    color: rgb(76, 83, 83);
+    font-size: 25px;
+    background-color: rgba(169, 212, 212, 0.369) !important;
+  }
+  .Accordion.Body{
+    color: black;
+  }
+  .myMensaje{
+    background-color: #f1f8ec; /* Color de fondo de la burbuja */
+    border-radius: 20px; /* Radio de borde para dar forma de burbuja */
+    padding: 10px 15px; /* Espaciado interno de la burbuja (vertical, horizontal) */
+    max-width: 80%; /* Ancho máximo de la burbuja */
+    margin: 10px; /* Margen alrededor de la burbuja */
+    position: relative; /* Para agregar el triángulo de la burbuja */
+    margin: 10px 2px 10px 0px;  /* Margen superior, derecho, inferior e izquierdo */
+  }
+  .respWpp{
+    background-color: #DCF8C6; /* Color de fondo de la burbuja */
+    border-radius: 20px; /* Radio de borde para dar forma de burbuja */
+    padding: 10px 15px; /* Espaciado interno de la burbuja (vertical, horizontal) */
+    max-width: 80%; /* Ancho máximo de la burbuja */
+    margin: 10px; /* Margen alrededor de la burbuja */
+    position: relative; /* Para agregar el triángulo de la burbuja */
+    margin: 15px auto 10px 80px;
+  }
+  .custom-icon{
+    color:rgb(0, 221, 255);
+    font-size: 20px;
+  }
+  .heartwpp{
+    color: rgb(244, 4, 160);
+  }

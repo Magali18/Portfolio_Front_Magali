@@ -7,6 +7,7 @@ backdrop-filter: blur(10px);
   height: 70px;
   background-color:#fa12c8;
   position: fixed;
+  z-index: 1; /* Añade un z-index aquí */
  
 `;
 

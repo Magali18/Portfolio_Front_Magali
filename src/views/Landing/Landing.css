@@ -18,14 +18,13 @@ height: 880px;
 .container2 h2{
   margin-top: 10%;
   color: #fc1786;
-  font-family: 'pacifico';
   font-size: 40px;
   margin-left: 35%;
 
 }
 
 .container2 h1{
-  font-family: 'pacifico';
+
   color:  #fc1786; 
   margin-left: 43%;
   margin-bottom:30px;
@@ -61,12 +60,14 @@ height: 880px;
     color:#427388;
   }
    .containerForm p{
-    font-family: 'pacifico';
-    color: aliceblue;
+
+    color:#a81cbe;
     font-size: 40px;
   padding: 5%;
-  font-weight: 0;;
-  background-color: rgba(3, 3, 3, 0.243);
-  backdrop-filter: blur(2px) saturate(177%);
+  font-weight: 0;
+  text-align: center;
+
+  
+  
    }
 

@@ -2,4 +2,6 @@
 background-size:contain;
 height: 900px;
 z-index: 0; /* Añade un z-index aquí */
+text-align: center;
+color: blueviolet;
 }

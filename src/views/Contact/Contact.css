@@ -1,7 +1,7 @@
 
  @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 .containerBody{
-font-family:'pacifico';
+
     margin-top: 0%;
     background: url('../../image/bccffda601e3d3950001a6177b0273ca.jpg');
     background-size:auto;
@@ -79,7 +79,7 @@ z-index: 0;
 }
 .contact input::placeholder{
 color: rgba(247, 249, 249, 0.808);
-font-family: 'pacifico';
+
 padding:35%;
 
 }

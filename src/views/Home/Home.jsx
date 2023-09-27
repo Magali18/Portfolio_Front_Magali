@@ -6,7 +6,7 @@ import Landing from "../Landing/Landing";
 import Educacion from "../Educacion/Educacion";
 import Contact from '../Contact/Contact'
 import WppMessage from "../../components/WppMessage/wppMesagge";
-
+import {AiOutlineWhatsApp} from "react-icons/ai";
 import FotoPerfil from "../../image/Screenshot_10.png";
 
 const Home = () => {
@@ -46,6 +46,9 @@ const Home = () => {
               <FaLinkedin />
             </h3>
             </Link>
+            <h3>
+              <AiOutlineWhatsApp />
+            </h3>
      
           </div>
         </div>

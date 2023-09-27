@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
- const postVisit = createAsyncThunk("visitor/postVisit", async (visitData) => {
+export const postVisit = createAsyncThunk("visitor/postVisit", async (visitData) => {
     try {
 
         const {data} = await axios.post(
@@ -13,7 +13,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
       throw new Error(error);
     }
   });
-  const postVisitNull = createAsyncThunk("visitor/postVisitNull", async () => {
+  export const postVisitNull = createAsyncThunk("visitor/postVisitNull", async () => {
     try {
 
         const {data} = await axios.post(
@@ -26,7 +26,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
     }
   });
 
-    const getVisit = createAsyncThunk("visitor/getVisit", async () => {
+    export const getVisit = createAsyncThunk("visitor/getVisit", async () => {
     try {
       
         const {data} = await axios.get(
@@ -39,7 +39,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
     }
   });
  
-  const wppMessageRedux = createAsyncThunk("visitor/wppMessageRedux", async () => {
+ export const wppMessageRedux = createAsyncThunk("visitor/wppMessageRedux", async () => {
     try {
 
         const {data} = await axios.post(
@@ -53,5 +53,5 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
   });
 
 
-  export default {postVisit, getVisit,postVisitNull,wppMessageRedux};
+
    

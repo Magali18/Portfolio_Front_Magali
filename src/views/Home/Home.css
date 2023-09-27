@@ -8,7 +8,6 @@ z-index: 0; /* Añade un z-index aquí */
  }
     .Home{
     margin-left: 40%;
-    font-family: 'pacifico';
     align-items: center;
    
 
@@ -32,7 +31,7 @@ z-index: 0; /* Añade un z-index aquí */
 
      
      .container h3{
-
+font-family: 'Pacifico';
       margin-left: -5%;
       color:    #ea137b;  
   transition: color 0.3s ease;
@@ -41,6 +40,7 @@ z-index: 0; /* Añade un z-index aquí */
   margin-top: 5%;
      }
      .container h4{
+      font-family: 'Pacifico';
     margin-left: -17%;
     margin-top: 7%; 
     margin-bottom: 7%;

@@ -5,6 +5,7 @@ BiLogoRedux,BiCloudRain,BiLogoTailwindCss} from "react-icons/bi";
 import { SiVite,SiExpress,SiMercadopago } from "react-icons/si";
 
 const info = [{
+    title:'Proyecto Individual',
     description:'SPA bootcamp Henry',
     image:PI,
    
@@ -13,6 +14,7 @@ const info = [{
     demo:'https://www.youtube.com/watch?v=dzkmgVknamE',
     tech:[<BiLogoPostgresql/>,<BiLogoNodejs/>,<BiLogoHtml5/>,<BiLogoJavascript/>,<BiLogoCss3/>,<BiLogoReact />,<BiLogoRedux/>,<SiExpress/>]
 },{
+    title:'Proyecto Final',
     description: 'Proyecto grupal, final bootcamp Henry',
     image: PF,
 

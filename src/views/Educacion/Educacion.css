@@ -9,11 +9,22 @@ justify-content: center; /* Centra horizontalmente */
 }
 .containEducation{
     /* Propiedades de estilo para el contenedor */
-    width: 300px; /* Ancho del contenedor */
-    height: 200px; /* Altura del contenedor */
-  
+    width: 500px; /* Ancho del contenedor */
+    height: 500px; /* Altura del contenedor */
     border: 1px solid rgb(7, 5, 5); /* Borde con color */
     padding: 20px; /* Espacio interior */
     margin: 20px; /* Margen exterior */
     text-align: center; /* Alineación del texto en el centro */
+    gap:50px
+}
+.imagenProyecto{
+    width: 300px; /* Ancho del contenedor */
+    height: 200px; /* Altura del contenedor */
+    margin-bottom: 10%;
+
+}
+.iconTechs{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }

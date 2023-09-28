@@ -1,6 +1,6 @@
 .cards-container{
     
-   display: column;
+   display: flex;
    gap: 10px;
    align-items: center;
 }

@@ -7,15 +7,15 @@ const Educacion =()=>{
         <div className='styleEducacion'>
             <div data-aos="fade-up"
      data-aos-anchor-placement="top-bottom">
-         <h1 >Mis Proyectos</h1>
+         <h1 className='h1Titulo' >Mis Proyectos</h1>
          
 
             </div>
         
          <Pdf/>
-         <div className='containCards'>
-         <Cards></Cards>
-         </div>
+   
+         <Cards/>
+        
         </div>
     )
 };

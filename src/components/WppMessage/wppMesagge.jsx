@@ -10,8 +10,10 @@ import { BsCheck2All, BsFillChatHeartFill } from "react-icons/bs";
 import {addMensaje} from "../../redux/visitorSlice";
 import { useSelector } from "react-redux";
 
+
 const WppMessage = () => {
   const { mensajeState } = useSelector((state) => state.visitor);
+  const {value}= useSelector((state)=>state.visitor)
   console.log("mensajeState ----> : " + mensajeState);
 
   const dispatch = useDispatch();
@@ -52,7 +54,7 @@ console.log(mensaje.text)
 
   return (
     <Accordion defaultActiveKey="0" className="custom-accordion">
-      <Accordion.Item eventKey="1">
+      <Accordion.Item eventKey={value}>
         <Accordion.Header>
           <AiOutlineWhatsApp /> Enviame un mensaje
         </Accordion.Header>

@@ -8,10 +8,17 @@ import Contact from '../Contact/Contact'
 import WppMessage from "../../components/WppMessage/wppMesagge";
 import {AiOutlineWhatsApp} from "react-icons/ai";
 import FotoPerfil from "../../image/Screenshot_10.png";
+import {setWindowWpp} from '../../redux/visitorSlice'
+import { useDispatch } from "react-redux";
 
 
 const Home = () => {
+const dispatch = useDispatch()
+const setStatewppButton=()=>{
+console.log('0')
+dispatch(setWindowWpp('0'))
 
+}
   
   return (
     <div className='imageContain'>
@@ -50,9 +57,11 @@ const Home = () => {
               <FaLinkedin />
             </h3>
             </Link>
-            <h3> 
-              <AiOutlineWhatsApp />
-            </h3>
+          
+              <button className="butonWppHome" onClick={setStatewppButton}> 
+               <h3>  <AiOutlineWhatsApp /> </h3>
+              </button>
+           
      
           </div>
         </div>

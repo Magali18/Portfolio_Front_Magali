@@ -1,7 +1,12 @@
 .styleEducacion{background: url('../../image/4182488908c0aa4f6ebf107e790f2b63.jpg');
 background-size:contain;
-height: 900px;
+height: 950px;
 z-index: 0; /* Añade un z-index aquí */
-text-align: center;
-color: blueviolet;
+
+}
+.h1Titulo {
+    text-align: center;
+    color: blueviolet;
+    text-decoration:underline;
+   margin-bottom: 10%;
 }

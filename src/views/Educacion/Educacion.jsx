@@ -5,16 +5,10 @@ import './Educacion.css'
 const Educacion =()=>{
     return(
         <div className='styleEducacion'>
-            <div data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom">
-         <h1 className='h1Titulo' >Mis Proyectos</h1>
-         
-
-            </div>
-        
-         <Pdf/>
-   
-         <Cards/>
+    <div className='containEducation'> 
+    </div>
+    <div className='containEducation'> 
+</div>
         
         </div>
     )

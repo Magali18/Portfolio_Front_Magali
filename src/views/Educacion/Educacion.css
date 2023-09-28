@@ -2,11 +2,18 @@
 background-size:contain;
 height: 950px;
 z-index: 0; /* Añade un z-index aquí */
+display: flex;
+align-items: center;
+justify-content: center; /* Centra horizontalmente */
 
 }
-.h1Titulo {
-    text-align: center;
-    color: blueviolet;
-    text-decoration:underline;
-   margin-bottom: 10%;
+.containEducation{
+    /* Propiedades de estilo para el contenedor */
+    width: 300px; /* Ancho del contenedor */
+    height: 200px; /* Altura del contenedor */
+  
+    border: 1px solid rgb(7, 5, 5); /* Borde con color */
+    padding: 20px; /* Espacio interior */
+    margin: 20px; /* Margen exterior */
+    text-align: center; /* Alineación del texto en el centro */
 }

@@ -5,10 +5,9 @@ export const Container = styled.div`
 backdrop-filter: blur(10px);
   width: 100%;
   height: 70px;
-  background-color:#fa12c8;
   position: fixed;
   z-index: 1; /* Añade un z-index aquí */
- 
+
 `;
 
 
@@ -78,8 +77,8 @@ export const MenuItem = styled.li`
 `;
 
 export const MenuItemLink = styled.a`
-position
-color:#fa12c8;
+
+color:#fff;
 text-decoration: none;
   display: flex;
   justify-content: center;

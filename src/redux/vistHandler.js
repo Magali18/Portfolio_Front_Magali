@@ -39,18 +39,25 @@ export const postVisit = createAsyncThunk("visitor/postVisit", async (visitData)
     }
   });
  
- export const wppMessageRedux = createAsyncThunk("visitor/wppMessageRedux", async () => {
+   export const wppMessageRedux = createAsyncThunk("visitor/wppMessageRedux", async (mensaje) => {
+    console.log(typeof mensaje); 
+    console.log(mensaje)
+
+    if(!mensaje)console.log('en ReduxHnadler la data esta vacia')
     try {
 
         const {data} = await axios.post(
-          'http://localhost:3001/postWpp'
+          'http://localhost:3001/postWpp',
+          mensaje
          );
+        
          return data;
     
     } catch (error) {
       throw new Error(error);
     }
   });
+
 
 
 

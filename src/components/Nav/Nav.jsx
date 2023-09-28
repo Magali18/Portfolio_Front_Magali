@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import { useNavigate} from "react-router-dom";
-
-
+import React, { useState, useSyncExternalStore } from "react";
 
 import {
   Container,
@@ -24,37 +21,55 @@ import {
 
 import { IconContext } from "react-icons";
 
-
-
-
 const Navbar = () => {
-  const navigate = useNavigate()
-  
+  const [navBar, setNavBar] = useState(false);
 
- 
+  const [showMobileMenu, setShowMobileMenu] = useState(true);
 
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const changeNavBar = () => {
+    console.log(window.scrollY)
+    
+    if (window.scrollY <= 400) {
+      setNavBar(false);
+    } else {
+      setNavBar(true);
+    }
+  };
 
- const handleLanding = () => {
-    navigate('/abaut');
+  window.addEventListener("scroll", changeNavBar);
+  const scrollToHomeSection = () => {
+    const homeSection = document.querySelector("#home-section");
+    if (homeSection) {
+      homeSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
   
-  const handleAbaut = () => {
-    navigate('/');
+  const scrollToAboutSection = () => {
+    const aboutSection = document.querySelector("#about-section");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
   
-  const handlePortfolio = () => {
-    navigate('/portfolio');
+  const scrollToPortfolioSection = () => {
+    const portfolioSection = document.querySelector("#portfolio-section");
+    if (portfolioSection) {
+      portfolioSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
-    const handleContact = () => {
-    navigate('/contact');
+  
+  const scrollToContactMeSection = () => {
+    const contactSection = document.querySelector("#contact-section");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
-
+  
 
   return (
-    <Container value={{style: {backgoround:"#fa12c8"}}}>
+    <Container style={navBar ? { backgroundColor: "#73717425" } : { backgroundColor: "#fa12c8" }}>
       <Wrapper>
-        <IconContext.Provider value={{ style: { fontSize: "2em"}}}>
+        <IconContext.Provider value={{ style: { fontSize: "2em" } }}>
           <LogoContainer>
             <p></p>
           </LogoContainer>
@@ -64,43 +79,37 @@ const Navbar = () => {
           </MobileIcon>
 
           <Menu open={showMobileMenu}>
-          
-              <MenuItem onClick={handleAbaut}>
-                <MenuItemLink
-                  onClick={() => setShowMobileMenu(!showMobileMenu)}
-                >
-                  <div>
-                    <FaHome />
-                    HOME
-                  </div>
-                </MenuItemLink>
-              </MenuItem>
-            
-       
-              <MenuItem onClick={ handleLanding}>
-                <MenuItemLink
-                  onClick={() => setShowMobileMenu(!showMobileMenu)}
-                >
-                  <div>
-                    <FaUserAlt />
-                    ABOUT ME
-                  </div>
-                </MenuItemLink>
-              </MenuItem>
-           
-            <MenuItem onClick={handlePortfolio}> 
+            <MenuItem onClick={scrollToHomeSection}>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
-                  <FaBriefcase />
-                  PORTFOLIO
+                  <FaHome />
+                  HOME
                 </div>
               </MenuItemLink>
             </MenuItem>
-            <MenuItem onClick={handleContact}>
+
+            <MenuItem onClick={scrollToAboutSection}>
+              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                <div>
+                  <FaUserAlt />
+                  ABAUT
+                </div>
+              </MenuItemLink>
+            </MenuItem>
+
+            <MenuItem onClick={scrollToPortfolioSection}>
+              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                <div>
+                  <FaBriefcase />
+                 PORTFOLIO
+                </div>
+              </MenuItemLink>
+            </MenuItem>
+            <MenuItem onClick={scrollToContactMeSection}>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaGlasses />
-                  CONTACT ME
+                  CONTACTME
                 </div>
               </MenuItemLink>
             </MenuItem>
@@ -108,7 +117,7 @@ const Navbar = () => {
         </IconContext.Provider>
       </Wrapper>
     </Container>
-      );
+  );
 };
 
 export default Navbar;

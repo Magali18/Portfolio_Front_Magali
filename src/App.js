@@ -14,7 +14,7 @@ const App = () => {
 
     setTimeout(() => {
       setCargando(false);
-    });
+    },5000);
    
   }, []);
 
@@ -28,6 +28,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />}></Route>
+          
           </Routes>
         </div>
       )}

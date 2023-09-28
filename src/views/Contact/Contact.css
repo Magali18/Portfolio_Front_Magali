@@ -75,7 +75,8 @@ z-index: 0;
 }
 .stylePfooter p{
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
 }
 .contact input::placeholder{
 color: rgba(247, 249, 249, 0.808);
@@ -88,7 +89,6 @@ padding:35%;
     margin-bottom: 10px;
 padding: 5px;
     width: 70px;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(27, 201, 245, 0.395);
     color:rgba(247, 239, 248, 0.975);
       margin-left: 2%;
@@ -113,8 +113,9 @@ padding: 5px;
       text-shadow: 1px 1px 2px #f9f1f1;
 }
 .Stylep{
-    font-size: 30px;
-    color: rgba(0, 0, 0, 0.645);
+    text-align: center;
+    font-size: 20px;
+    color: rgba(167, 245, 189, 0.645);
 }
 .colorSpan{
     color: #ac0606;

@@ -9,15 +9,19 @@ import WppMessage from "../../components/WppMessage/wppMesagge";
 import {AiOutlineWhatsApp} from "react-icons/ai";
 import FotoPerfil from "../../image/Screenshot_10.png";
 
+
 const Home = () => {
+
   
   return (
     <div className='imageContain'>
-     
+     <section id="home-section"> 
       <div className="Home">
         <div className="container">
           <div className="imgHover" >
-            <img src={FotoPerfil} alt="ImagenPerfil" />
+        
+            <img src={FotoPerfil} alt="ImagenPerfil" loading="lazy" 
+     />
           </div>
           <div data-aos="fade-up"
      data-aos-duration="3000">
@@ -46,20 +50,22 @@ const Home = () => {
               <FaLinkedin />
             </h3>
             </Link>
-            <h3>
+            <h3> 
               <AiOutlineWhatsApp />
             </h3>
      
           </div>
         </div>
       </div>
-      <section id='Landing-section' >
+      </section>
+      
+      <section id='about-section' >
       <Landing />
       </section>
-      <section id='Educacion-section'>
+      <section id='portfolio-section'>
       <Educacion />
       </section>
-      <section id='Contact-section'>
+      <section id='contact-section'>
         <Contact/>
       </section>
     </div>

@@ -101,8 +101,7 @@ const Navbar = () => {
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaBriefcase />
-                 PORTFOLIO
-                </div>
+PROYECTOS                </div>
               </MenuItemLink>
             </MenuItem>
             <MenuItem onClick={scrollToContactMeSection}>

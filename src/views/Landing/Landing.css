@@ -9,17 +9,22 @@ height: 950px;
 
 
 }.container2{
- 
+
  
   border: 1px solid rgba(255, 255, 255, 0.125);
   z-index: 0;
   height: 880px;
 } 
+.pStyle{
+  text-decoration: underline wavy;;
+}
 .container2 h2{
   margin-top: 10%;
   color: #fc1786;
   font-size: 40px;
-  margin-left: 35%;
+  text-align: center;
+  justify-content: center;
+  text-decoration: underline wavy;
 
 }
 

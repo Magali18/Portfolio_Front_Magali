@@ -7,8 +7,8 @@ const Landing = () => {
       <div className="containerForm">
         
        <div className='container2'> 
-       <h2> Full Stack web Developer Junior</h2>
-       <p>My Skills:</p>
+       <h2> "Full Stack web Developer Junior"</h2>
+       <p className="pStyle">My Skill Techs:</p>
 <IconTecnologi/> 
        
       </div>

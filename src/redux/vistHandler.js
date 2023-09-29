@@ -47,7 +47,7 @@ export const postVisit = createAsyncThunk("visitor/postVisit", async (visitData)
     try {
 
         const {data} = await axios.post(
-'https://portfolio-back-magali-git-magalisj-magali18s-projects.vercel.app',
+'https://portfolio-back-magali-git-magalisj-magali18s-projects.vercel.app/postWpp',
 mensaje);
         
          return data;

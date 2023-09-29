@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   mensajeState: [],
   value: "1",
+  firstMensaje:''
 };
 
 export const visitorSlice = createSlice({
@@ -18,7 +19,10 @@ export const visitorSlice = createSlice({
     setWindowWpp: (state, action) => {
       state.value = action.payload;
     },
+    setFirstMensaje:(state,action)=>{
+      state.firstMensaje = action.payload
+    }
   },
 });
-export const { addVisitor, addMensaje, setWindowWpp } = visitorSlice.actions;
+export const { addVisitor, addMensaje, setWindowWpp,setFirstMensaje } = visitorSlice.actions;
 export default visitorSlice.reducer;

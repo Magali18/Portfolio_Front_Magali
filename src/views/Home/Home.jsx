@@ -7,12 +7,25 @@ import Educacion from "../Educacion/Educacion";
 import Contact from '../Contact/Contact'
 import WppMessage from "../../components/WppMessage/wppMesagge";
 import {AiOutlineWhatsApp} from "react-icons/ai";
-import FotoPerfil from "../../image/Screenshot_10.png";
+import FotoPerfil from "../../image/Perfile_Cat_Magali.png";
 import {setWindowWpp} from '../../redux/visitorSlice'
 import { useDispatch } from "react-redux";
+import { useEffect,useRef } from "react";
+import emailjs from "@emailjs/browser"; 
+
 
 
 const Home = () => {
+const form = useRef()
+  useEffect(()=>{
+    
+  emailjs.sendForm(
+    "service_dpv31ic",
+    "template_kamzfmu",
+      form.current,
+  "Cqv9CHmzuJQAY8x_G"
+);
+  },[])
 const dispatch = useDispatch()
 const setStatewppButton=()=>{
 console.log('0')
@@ -22,6 +35,7 @@ dispatch(setWindowWpp('0'))
   
   return (
     <div className='imageContain'>
+      <form ref={form}/>
      <section id="home-section"> 
       <div className="Home">
         <div className="container">

@@ -5,6 +5,13 @@ import {GrDeploy} from 'react-icons/gr'
 import Pdf from '../../components/PDF/Pdf'
 
 const Educacion = () => {
+const openDeploy =(prop)=>{
+window.open(prop,"_blank")
+}
+const openDemo =(prop)=>{
+  window.open(prop,"_blank")
+
+}
   return (
     <div className="StyleContainerEducacion">
      <h1 className="ProyectStyleTitle">Mis Proyectos</h1>
@@ -25,13 +32,13 @@ const Educacion = () => {
           <div className="containerBotones">
             <div>
               
-              <button>
+              <button onClick={()=>openDemo(item.demo)}>
                 <AiFillYoutube className="iconYoutube" /> YouTube
               </button>
             </div>
             <div>
       
-              <button> <GrDeploy className="iconDeploy"/> Deploy</button>
+              <button onClick={()=>openDeploy(item.deploy)}> <GrDeploy className="iconDeploy"/> Deploy</button>
             </div>
           </div>
         </div>
@@ -39,6 +46,7 @@ const Educacion = () => {
     </div>
     <div className="pdsStyle"> 
    <Pdf/> 
+   <span>Actualización: 28/09/2023</span>
    </div>
     </div>
   );

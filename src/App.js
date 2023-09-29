@@ -3,8 +3,8 @@ import Home from "./views/Home/Home";
 import Navbar from "./components/Nav/Nav";
 import { Route, Routes } from "react-router-dom";
 import Spinner from "./components/Spinner/Spinner";
+import React, { useEffect,useState} from "react";
 
-import React, { useEffect,useState } from "react";
 
 const App = () => {
   const [cargando, setCargando] = useState(true);
@@ -14,7 +14,7 @@ const App = () => {
 
     setTimeout(() => {
       setCargando(false);
-    },5000);
+    },4000);
    
   }, []);
   

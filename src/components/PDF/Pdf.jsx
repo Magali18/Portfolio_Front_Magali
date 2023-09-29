@@ -1,4 +1,4 @@
-import resume from '../document/CvMagaliPereyra.pdf'
+import resume from '../document/Curriculum_Magali_Pereyra.pdf'
 import './pdf.css'
 import { TfiSave } from "react-icons/tfi";
 
@@ -9,7 +9,7 @@ const PDF = () => {
     <div className='loli'>
  
 
-      <p>Podes DESCARGAR los detalles de mi experiencia laboral y educacion en formato PDF haciendo click aqui :
+      <p>Podés DESCARGAR los detalles de mi experiencia laboral y educación, en formato PDF, haciendo click aquí :
       <a href={resume} download='MagaliPereyra.pdf' ><TfiSave/>
 
        

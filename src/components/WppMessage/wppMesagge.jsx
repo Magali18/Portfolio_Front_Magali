@@ -6,7 +6,7 @@ import { AiOutlineWhatsApp } from "react-icons/ai";
 import { useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import { MdSend } from "react-icons/md";
-import { BsCheck2All, BsFillChatHeartFill, BsRobot } from "react-icons/bs";
+import { BsCheck2All, BsFillChatHeartFill } from "react-icons/bs";
 import { addMensaje, setFirstMensaje } from "../../redux/visitorSlice";
 import { useSelector} from "react-redux";
 import {FaRobot} from 'react-icons/fa'
@@ -33,7 +33,7 @@ const WppMessage = () => {
 "Hi, I'm bot, tu mensaje fue enviado a mi wpp",
 "Dejame tu número aquí para contactarte." ];
   const efectoEscribiendo = () => {
-    if (!efectoEjecutado) {
+    if (!efectoEjecutado ) {
       setEfectoEjecutado(true);
       setTimeout(() => {
         setBotEscribiendo(true);
@@ -47,7 +47,7 @@ const WppMessage = () => {
       }, 7000);
     }
   };
-
+  
   const onChange = (e) => {
     setMensaje({
       ...mensaje,

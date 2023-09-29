@@ -33,7 +33,7 @@ const WppMessage = () => {
 "Hi, I'm bot, tu mensaje fue enviado a mi wpp",
 "Dejame tu número aquí para contactarte." ];
   const efectoEscribiendo = () => {
-    if (!efectoEjecutado ) {
+    if (!efectoEjecutado && !botMensaje ) {
       setEfectoEjecutado(true);
       setTimeout(() => {
         setBotEscribiendo(true);

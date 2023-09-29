@@ -33,7 +33,7 @@ const WppMessage = () => {
 "Hi, I'm bot, tu mensaje fue enviado a mi wpp",
 "Dejame tu número aquí para contactarte." ];
   const efectoEscribiendo = () => {
-    if (!efectoEjecutado && !botMensaje ) {
+    if (!efectoEjecutado && !botMensaje) {
       setEfectoEjecutado(true);
       setTimeout(() => {
         setBotEscribiendo(true);
@@ -78,7 +78,7 @@ const WppMessage = () => {
   };
 
   return (
-    <Accordion defaultActiveKey="0" className="custom-accordion">
+     <Accordion defaultActiveKey="0" className="custom-accordion">
       <Accordion.Item eventKey={value}>
         <Accordion.Header>
           <AiOutlineWhatsApp className="wppIconHeader"/> Enviame un mensaje {newMesaje ? <PiNumberCircleOneFill className="alertIcon"/>: null} 

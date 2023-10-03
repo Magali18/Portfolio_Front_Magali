@@ -69,8 +69,10 @@ margin-left: -5%;
 
         }
         .container img{
+          margin-top: 50%;
           width: 200px;
-justify-content: center;    
+          margin-left: -30%;
+          justify-items: center;
      border: 3px solid #ea137b;
        
         }
@@ -83,7 +85,9 @@ justify-content: center;
           margin-left:-75%;
         }
         .containerStyleIcon{
-justify-content: center        }
+justify-content: center ;
+margin-left:  -30%;
+       }
       
       };
 .containerStyleIcon {
@@ -101,5 +105,7 @@ justify-content: center        }
 }
 .butonWppHome{
   border: none;
-}
+};
+
+/* ------------------ DISEÑO RESPONSIVE----------------------*/
    

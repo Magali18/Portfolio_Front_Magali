@@ -50,7 +50,7 @@ export const Menu = styled.ul`
   display: flex;
   justify-content: space-between;
   list-style: none;
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 700px) {
     background-color: #ea137b;
     position: absolute;
     top: 70px;
@@ -66,7 +66,7 @@ export const Menu = styled.ul`
 
 export const MenuItem = styled.li`
   height: 100%;
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 700px) {
     width: 100%;
     height: 70px;
     display: flex;
@@ -140,7 +140,7 @@ text-decoration: none;
       }
     }
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 300px) {
     div {
       width: 100%;
       justify-content: left;

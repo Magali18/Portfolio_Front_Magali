@@ -100,4 +100,12 @@ text-decoration: underline wavy;
     font-size: 20px;
     color: rgb(144, 34, 144);
 
+
+}
+/*------------RESPONSIVE-----------------*/
+@media screen and (max-width:576px){
+    .styleEducacion{
+        display: flex;
+        flex-direction: column; 
+    }
 }

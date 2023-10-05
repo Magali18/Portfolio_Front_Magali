@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content:center;
   margin: auto;
 `;
 
@@ -70,7 +70,7 @@ export const MenuItem = styled.li`
     width: 100%;
     height: 70px;
     display: flex;
-    justify-content: ce;
+    justify-content: space-between;
     align-items: center;
     text-decoration: none;
   }
@@ -153,7 +153,7 @@ text-decoration: none;
 
 export const MobileIcon = styled.div`
   display: none;
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 700px) {
     display: flex;
     align-items: center;
     cursor: pointer;

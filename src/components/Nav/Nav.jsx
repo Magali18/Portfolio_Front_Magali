@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import {
   Container,
-  LogoContainer,
   Wrapper,
   Menu,
   MenuItem,
@@ -69,9 +68,7 @@ const Navbar = () => {
     <Container style={navBar ? { backgroundColor: "#73717425" } : { backgroundColor: "#fa12c8" }}>
       <Wrapper>
         <IconContext.Provider value={{ style: { fontSize: "2em" } }}>
-          <LogoContainer>
-            <p></p>
-          </LogoContainer>
+
 
           <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}>
             {showMobileMenu ? <FaTimes /> : <FaBars />}

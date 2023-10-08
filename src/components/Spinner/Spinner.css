@@ -7,6 +7,7 @@
 }  
 .containerSnnip p{
   color: #fff;
+  display:flex;
  text-align: center;
 
 }
@@ -74,5 +75,12 @@
   100% {
     transform: translateX(0px);
   }
+}
+@media screen and (max-width:700px){
+  .containerSnnip p{
+   margin-left: 30%; 
+ }
+ .loader{
+margin-left: -20%; }
 }
   

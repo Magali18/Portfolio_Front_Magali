@@ -21,9 +21,8 @@ const App = () => {
 
   return (
     <div>
-      {cargando ? (
-        <Spinner/>
-  ) : (
+     {cargando ? (
+        <Spinner/>) : (
         <div>
         
           <Navbar />
@@ -31,8 +30,9 @@ const App = () => {
             <Route path="/" element={<Home />}></Route>
           
           </Routes>
-        </div>
-      )}
+        </div>)}
+    
+    
      
      
     </div>

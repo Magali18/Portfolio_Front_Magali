@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
+
 export const Container = styled.div`
 
 backdrop-filter: blur(10px);
   width: 100%;
   height: 70px;
   position: fixed;
-  z-index: 1; /* Añade un z-index aquí */
+  z-index: 1; /* Añade un z-index aquí *
 
 `;
 
@@ -22,28 +23,6 @@ export const Wrapper = styled.div`
   margin: auto;
 `;
 
-
-export const LogoContainer = styled.div`
-  margin-left: 0.5rem;
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem;
-  font-family: sans-serif;
-  p {
-    &:nth-child(2) {
-      color: #fff;
-    }
-    &:nth-child(3) {
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: #ea137b;
-    }
-  }
-  svg {
-    fill: #ea137b;
-    margin-right: 0.5rem;
-  }
-`;
 
 export const Menu = styled.ul`
   height: 100%;

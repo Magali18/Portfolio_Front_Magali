@@ -1,54 +1,31 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-export const postVisit = createAsyncThunk("visitor/postVisit", async (visitData) => {
+const TOKEN_WPP ='EAAE8DpOkrsQBOxKD6u5ZCjGZA4d5N4Oov8vTb2V025R0i0vJ6ZBW19UIZARLLlZBQSsbS5tN91nA55reFNeWVCsW110es8BzyfmRUO5SLXCOR3h7L99bPlm9lCWpASrbK00YWZCUsyTAecSjh9zzOWc3K9YjjxW30BkQ0ysOIwJCHnLOZC2MIKZB6KxZB'
+
+  const header = {
+    headers: {
+      Authorization: `Bearer ${TOKEN_WPP}`
+  
+    },
+  };
+  const dataTEmplate ={ "messaging_product": "whatsapp",
+   "to": "543883371406",
+    "type": "template",
+     "template":
+      { "name": "hello_world",
+       "language": { "code": "en_US" } } };
+
+   export const wppMessageRedux = createAsyncThunk("visitor/wppMessageRedux", async () => {
+
+
+    
     try {
 
         const {data} = await axios.post(
-          'http://localhost:3001/visit',visitData
-         );
-         return data;
-    
-    } catch (error) {
-      throw new Error(error);
-    }
-  });
-  export const postVisitNull = createAsyncThunk("visitor/postVisitNull", async () => {
-    try {
-
-        const {data} = await axios.post(
-          'http://localhost:3001/visit'
-         );
-         return data;
-    
-    } catch (error) {
-      throw new Error(error);
-    }
-  });
-
-    export const getVisit = createAsyncThunk("visitor/getVisit", async () => {
-    try {
-      
-        const {data} = await axios.get(
-          'http://localhost:3001/allVisit'
-         );
-         return data;
-    
-    } catch (error) {
-      throw new Error(error);
-    }
-  });
- 
-   export const wppMessageRedux = createAsyncThunk("visitor/wppMessageRedux", async (mensaje) => {
-    console.log(typeof mensaje); 
-    console.log(mensaje)
-
-    if(!mensaje)console.log('en ReduxHnadler la data esta vacia')
-    try {
-
-        const {data} = await axios.post(
-'https://portfolio-back-magali-git-magalisj-magali18s-projects.vercel.app/postWpp',
-mensaje);
+  ('https://graph.facebook.com/v17.0/132405959956444/messages'),
+          dataTEmplate,
+          header);
         
          return data;
     

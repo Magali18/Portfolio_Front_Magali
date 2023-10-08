@@ -27,7 +27,6 @@ const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(true);
 
   const changeNavBar = () => {
-    console.log(window.scrollY)
     
     if (window.scrollY <= 400) {
       setNavBar(false);

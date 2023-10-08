@@ -18,19 +18,18 @@ import emailjs from "@emailjs/browser";
 const Home = () => {
 const form = useRef()
 
-  useEffect(()=>{
+  //useEffect(()=>{
     
-  emailjs.sendForm(
-    "service_n1n0nfd",
-    "template_lcbyp82",
-      form.current,
-  "hmqDcf2jyiluo0Tdy"
-);
-  },[])
+ // emailjs.sendForm(
+   // "service_n1n0nfd",
+    //"template_lcbyp82",
+     // form.current,
+  //"hmqDcf2jyiluo0Tdy"
+//);
+  //},[])
 
 const dispatch = useDispatch()
 const setStatewppButton=()=>{
-console.log('0')
 dispatch(setWindowWpp('0'))
 
 }

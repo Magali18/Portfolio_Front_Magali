@@ -85,14 +85,20 @@ margin-left: -5%;
        
        }
         .container h3{
-          font-size: 35px;
+          font-size: 45px;
+          display:flex;
+          align-items: center;
 
         }
         .container h4{
-          font-size: 12px;
+          font-size: 20px;
+          display:flex;
+          align-items: center;
+
         }
         .containerStyleIcon{
 justify-content: center ;
+margin-bottom: 5%;
        }
       
       };

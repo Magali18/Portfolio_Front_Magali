@@ -88,7 +88,7 @@ const Navbar = () => {
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaUserAlt />
-                  ABAUT
+                  MY SKILLS
                 </div>
               </MenuItemLink>
             </MenuItem>
@@ -97,7 +97,7 @@ const Navbar = () => {
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div>
                   <FaBriefcase />
-PROYECTOS                </div>
+PROYECT               </div>
               </MenuItemLink>
             </MenuItem>
             <MenuItem onClick={scrollToContactMeSection}>

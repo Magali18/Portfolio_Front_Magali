@@ -10,23 +10,35 @@ import {AiOutlineWhatsApp} from "react-icons/ai";
 import FotoPerfil from "../../image/Perfile_Cat_Magali.png";
 import {setWindowWpp} from '../../redux/visitorSlice'
 import { useDispatch } from "react-redux";
-import { useEffect,useRef } from "react";
+import { useEffect,useRef,useState} from "react";
 import emailjs from "@emailjs/browser"; 
 
 
 
 const Home = () => {
-const form = useRef()
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const form = useRef()
+
+
+
 
   useEffect(()=>{
     
+    const handleResize=()=>{
+      setWindowWidth(window.innerWidth)
+      };
+
+      window.addEventListener('resize', handleResize);
+
   emailjs.sendForm(
     "service_n1n0nfd",
     "template_lcbyp82",
       form.current,
   "hmqDcf2jyiluo0Tdy"
 );
-  },[])
+return () => {
+  window.removeEventListener('resize', handleResize);
+};  },[])
 
 const dispatch = useDispatch()
 const setStatewppButton=()=>{
@@ -54,8 +66,7 @@ dispatch(setWindowWpp('0'))
             ¡No dudes en contactar conmigo y descubrir todo lo que tengo para
             ofrecer!
           </h4>
-          <WppMessage/>
-
+          <WppMessage className={windowWidth <= 700 ? 'wpp-message-hidden' : ''} />
           <div className="containerStyleIcon">
             <Link to="https://github.com/Magali18">
               <h3>

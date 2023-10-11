@@ -59,11 +59,18 @@ margin-left: -5%;
       font-size: 15px;
       margin-top: 50px;
       color: black;
-    }
+    };
+  
+  
 
    
       
       @media screen and (max-width: 700px){
+        .wpp-message-hidden {
+          display: none;
+        };
+         
+        
         .imageContain{
           width: 1000px;
           height: 700px;

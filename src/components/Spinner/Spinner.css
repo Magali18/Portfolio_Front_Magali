@@ -18,7 +18,7 @@
   width: 160px;
   height: 185px;
   position:absolute;
-  background:#65320df3;/*cuerpo*/
+  background:#fff;/*cuerpo*/
   background-size: cover;
   border-radius: 100px 100px 0 0;
 }
@@ -52,8 +52,8 @@
   height: 125px;
   left: -20%;
   top: 0;
-  background-image: radial-gradient(circle, #65320d 48%, transparent 50%),/*orejitas*/
-    radial-gradient(circle,#65320d 48%, transparent 50%);/*orejitas*/
+  background-image: radial-gradient(circle, #fff 48%, transparent 50%),/*orejitas*/
+    radial-gradient(circle,#fff 48%, transparent 50%);/*orejitas*/
   background-repeat: no-repeat;
   background-size: 65px 65px;
   background-position: 0px 12px, 145px 12px;

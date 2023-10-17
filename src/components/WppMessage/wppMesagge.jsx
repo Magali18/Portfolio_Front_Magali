@@ -93,7 +93,7 @@ const WppMessage = () => {
               {firstMensaje} <BsCheck2All className="custom-icon" />
             </p>
           )}
-          {botEscribiendo && <p className="loader1">...</p>}
+          {botEscribiendo && <p className="loader1"></p>}
           {mensajeDeBot.length > 0 && (
             <p>
               {mensajeDeBot.map((mensaje, index) => (

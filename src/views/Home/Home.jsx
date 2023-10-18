@@ -10,7 +10,7 @@ import { AiOutlineWhatsApp } from "react-icons/ai";
 import FotoPerfil from "../../image/Perfile_Cat_Magali.png";
 import { setWindowWpp } from "../../redux/visitorSlice";
 import { useDispatch } from "react-redux";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const Home = () => {

@@ -14,15 +14,9 @@ import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const Home = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const form = useRef();
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-console.log(windowWidth)
-    window.addEventListener("resize", handleResize);
 
     emailjs.sendForm(
     "service_n1n0nfd",
@@ -30,9 +24,7 @@ console.log(windowWidth)
       form.current,
   "hmqDcf2jyiluo0Tdy"
 );
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+   
   }, []);
 
   const dispatch = useDispatch();
@@ -57,7 +49,6 @@ console.log(windowWidth)
               ofrecer!
             </h4>
             <WppMessage
-              className={windowWidth <= 700 ? "wpp-message-hidden" : ""}
             />
             <div className="containerStyleIcon">
               <Link to="https://github.com/Magali18">

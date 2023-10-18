@@ -24,12 +24,12 @@ const Home = () => {
 console.log(windowWidth)
     window.addEventListener("resize", handleResize);
 
-    /*emailjs.sendForm(
+    emailjs.sendForm(
     "service_n1n0nfd",
     "template_lcbyp82",
       form.current,
   "hmqDcf2jyiluo0Tdy"
-);*/
+);
     return () => {
       window.removeEventListener("resize", handleResize);
     };

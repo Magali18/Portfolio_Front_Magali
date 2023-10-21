@@ -4,6 +4,7 @@ import Navbar from "./components/Nav/Nav";
 import { Route, Routes } from "react-router-dom";
 import Spinner from "./components/Spinner/Spinner";
 import React, { useEffect,useState} from "react";
+import Me from './views/Me/Me'
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
         
           <Navbar />
           <Routes>
+            <Route path="/me" element={<Me/>} />
             <Route path="/" element={<Home />}></Route>
           
           </Routes>

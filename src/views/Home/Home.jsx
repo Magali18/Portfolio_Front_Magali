@@ -16,7 +16,7 @@ import emailjs from "@emailjs/browser";
 const Home = () => {
   const form = useRef();
 
-  useEffect(() => {
+  /*useEffect(() => {
 
     emailjs.sendForm(
     "service_n1n0nfd",
@@ -25,7 +25,7 @@ const Home = () => {
   "hmqDcf2jyiluo0Tdy"
 );
    
-  }, []);
+  }, []);*/
 
   const dispatch = useDispatch();
   const setStatewppButton = () => {

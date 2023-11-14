@@ -108,6 +108,14 @@ PROYECT               </div>
                 </div>
               </MenuItemLink>
             </MenuItem>
+            <MenuItem onClick={''}>
+              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                <div>
+                  <FaGlasses />
+                  MENSAJES
+                </div>
+              </MenuItemLink>
+            </MenuItem>
           </Menu>
         </IconContext.Provider>
       </Wrapper>
